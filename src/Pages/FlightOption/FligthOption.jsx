@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Checkbox, Flex, Radio, Stack, Text, VStack } from '@chakra-ui/react'
 import FligthOptionSlider from './SliderFligthOption'
 import { FlightTimes } from './TimesFlight'
@@ -9,7 +9,9 @@ import { useSelector } from 'react-redux'
 function FligthOption() {
 
 
-    const flight = useSelector(state => state.flightReducer.Stackflight);
+
+    const flight = useSelector(state => state.flightReducer.flight);
+
     console.log(flight);
 
     const AscSort = () => {
