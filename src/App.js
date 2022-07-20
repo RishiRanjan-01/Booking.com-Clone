@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './Components/Navbar';
+import FligthOption from './Pages/FlightOption/FligthOption';
 
 function App() {
   return (
     <>
-    <Navbar/>
+      <FligthOption />
     </>
   );
 }

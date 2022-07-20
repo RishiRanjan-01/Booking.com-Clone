@@ -1,0 +1,20 @@
+.bestBox {
+    height: 50px;
+    text-align: center;
+}
+
+
+
+
+.bestBox div {
+
+    width: 34%;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.bestBox div:hover {
+    background-color: rgb(218, 213, 213);
+}
