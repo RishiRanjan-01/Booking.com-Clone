@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 function FligthOption() {
 
 
-    const flight = useSelector(state => state.flight);
+    const flight = useSelector(state => state.flightReducer.flight);
     console.log(flight);
 
     const AscSort = () => {
