@@ -1,0 +1,195 @@
+
+.top_head{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    height:10rem;
+    background-color: #003580;
+}
+
+
+/*  Top Head of the Navbar Section */
+.mainContainer{
+    width: 70%;
+    margin: auto;
+    
+}
+.logoBox{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin: auto;
+    /* border: 1px solid white; */
+    justify-content: space-between;
+    align-items: center;
+}
+.bui_login_laguage{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.bui_language{
+    height: 100%;
+    width: 33%;
+    display:flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+.bui_language  img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+.bui_language div:nth-child(1){
+    height: 80%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    cursor: pointer;
+    font-weight: 500;
+}
+.bui_language div:nth-child(1):hover{
+    background-color: #4670ab;
+}
+.bui_language div:nth-child(2){
+    height: 80%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    cursor: pointer;
+}
+.bui_language div:nth-child(2):hover{
+    background-color: #4670ab;
+}
+.bui_language div:nth-child(3){
+    height: 80%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+   cursor: pointer;
+}
+.bui_language div:nth-child(3):hover{
+    background-color: #4670ab;
+}
+.btnbox{
+    height: 100%;
+    width: 65%;
+    display:flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnbox button:nth-child(2){
+    height: 55%;
+    width: 25%;
+    background-color: #fff;
+    color: #003580;
+    font-weight: 500;
+}
+.btnbox button:nth-child(2):hover{
+    background-color: #e4e6e9;
+}
+.btnbox button:nth-child(3){
+    height: 55%;
+    width: 25%;
+    background-color: #fff;
+    color: #003580;
+    font-weight: 500;
+}
+.btnbox button:nth-child(3):hover{
+    background-color: #e4e6e9;
+}
+.btnbox button:nth-child(1){
+    height: 60%;
+    width: 40%;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btnbox button:nth-child(1):hover{
+    background-color: #4670ab;
+}
+
+/* Routing Box Of Navbar */
+
+.routingbox{
+    width: 75%;
+    height: 5rem;
+    /* border: 1px solid white; */
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.routingbox div{
+    height: 3rem;
+    width: 15%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+
+}
+.routingbox div:hover{
+    background-color: #4670ab;
+    cursor: pointer;
+}
+/* .routingbox div:nth-child(1){
+    border: 1px solid white;
+} */
+.routingbox div:nth-child(2){
+    height: 3rem;
+    width: 18%;
+}
+.routingbox div:nth-child(4){
+    height: 3rem;
+    width: 18%;
+}
+.routingbox div:nth-child(5){
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 18%;
+}
+.routingbox div:nth-child(6){
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 20%;
+}
+ion-icon {
+    color: #fff;
+    font-size: 22px;
+}
+.routingbox div h4{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+.taxi{
+    height: 30px;
+    width: 30px;
+}
+.taxi path{
+    fill: #fff;
+}
+/* .streamline_travel_luggage_alt{
+    height: 40px;
+    width: 40px;
+} */
+.streamline_travel_luggage_alt path{
+    fill: #fff;
+}

@@ -1,0 +1,116 @@
+.All_Hotels_Main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.All_Hotels_All_Container{
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid rgb(0, 204, 255); */
+}
+.All_Hotels_Breadcrums{
+    /* border: 1px solid rgb(1, 7, 1); */
+    width: 100%;
+    padding: 5px;
+}
+.All_Hotels_All_Content{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    /* border: 2px solid rgb(0, 255, 13); */
+}
+.All_Hotels_All_Content_left{
+    width: 25%;
+    /* border: 1px solid rgb(111, 0, 255); */
+}
+.All_Hotels_All_Content_Right{
+    width: 75%;
+    /* border: 1px solid red; */
+}
+.All_Hotels_All_Content_Right_Container{
+    /* border: 1px solid rgb(3, 82, 252); */
+    width: 97%;
+    padding: 8px;
+    display: flex;
+    margin: 0 auto;
+}
+.All_Hotels_All_Content_Right_Container:hover{
+    box-shadow: rgb(9, 12, 199)0px 3px 6px, rgb(16, 202, 235) 0px 3px 6px;
+}
+.All_Hotels_All_Content_Right_Container_image{
+    /* border: 1px solid red; */
+    width: 30%;
+    padding: 5px;
+}
+.All_Hotels_All_Content_Right_Container_image img {
+    border-radius: 5px;
+}
+.All_Hotels_All_Content_Right_Container_description{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+}
+.All_Hotels_All_Content_Right_Container_showprice{
+    /* border: 1px solid red; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 5px;
+}
+.All_Hotels_All_Content_Right_Container_showprice_top{
+    display: flex;
+    justify-content: space-between;
+}
+.All_Hotels_All_Content_left_SearchBox{
+    width: "100%";
+    height: 416px;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: start;
+    border-radius: 3px;
+    letter-spacing: normal;
+    background-color: #FEBB02;
+}
+
+.All_Hotels_All_Content_left_SearchBox_input{
+    background-color: white;
+    width: 98%;
+    height: 35px;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+.All_Hotels_All_Content_left_SearchBox_searchicons{
+    /* border: 1px solid red; */
+    font-size: 20px;
+    margin:9px 0 7px 15px;
+}
+.All_Hotels_All_Content_left_Filter{
+    width: "100%";
+    border: 1px solid grey;
+    border-radius: 3px;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 10px ;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: start;
+}
+.All_Hotels_All_Content_left_Filter div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
