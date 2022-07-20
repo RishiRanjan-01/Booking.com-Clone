@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './Components/Navbar';
+import Hotel from './Pages/All_Hotel/Hotel';
 
 function App() {
   return (
     <>
-    <Navbar/>
+    <Hotel/>
     </>
   );
 }
