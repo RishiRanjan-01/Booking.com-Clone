@@ -1,0 +1,69 @@
+
+.searchbarContainer{
+    width: 100%;
+    height: 13rem;
+    background-color: #003580;
+    /* border: 1px solid red; */
+}
+.textContainer{
+    width: 70%;
+    height: 5rem;
+    margin: auto;
+    padding-top: 2rem;
+    
+    /* margin-top: 2rem; */
+}
+.textContainer h1{
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+}
+.textContainer p{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+}
+.SearchbarArea{
+    width: 70%;
+    height: 4rem;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 6rem;
+}
+.checkboxDiv{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 1rem;
+}
+.checkboxDiv input{
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgb(170, 169, 169);
+}
+.mainBody{
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    padding: 0;
+    margin-top: 6rem;
+    border: 1px solid red;
+}
+.coronaInstruction{
+    height: 4rem;
+    padding: 1.2rem;
+    border: 1px solid red;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.coronaInstruction > div{
+    height: 40px;
+    width: 40px;
+    background-color: #fff0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
