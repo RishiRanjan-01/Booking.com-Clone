@@ -8,6 +8,8 @@ import FlightHome from "./Pages/FlightHome/FlightHome"
 import ContactFlight from './Pages/FlightOption/ContactFlight';
 
 import HomePage from './Pages/Home/HomePage';
+import HotelPrice from './Pages/All_Hotel/HotelPrice';
+import HotelSeeAvialability from './Pages/All_Hotel/HotelSeeAvialability';
 
 
 
@@ -21,8 +23,10 @@ function App() {
       {/* <Hotel/> */}
       {/* <FlightHome/> */}
      {/* <FligthOption /> */}
-    <HomePage/>
+    {/* <HomePage/> */}
     {/* <Hotel/> */}
+    {/* <HotelPrice/> */}
+    <HotelSeeAvialability/>
     {/* <FlightHome/> */}
 
 

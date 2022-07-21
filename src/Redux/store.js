@@ -1,9 +1,12 @@
 import { legacy_createStore as createStore, compose, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk"
-import { reducer as PassengerCountReducer } from "./PassengerCountReducer/reducer"
 import { reducer as flightReducer } from "./Flight/reducer";
-const rootreducer = combineReducers({
-    passenger: PassengerCountReducer,
+import {reducer as PassengerCountReducer} from "./PassengerCountReducer/reducer"
+import {reducer as AllHotelsReducer} from "./AllHotels/reducer"
+
+const rootreducer=combineReducers({
+    passenger:PassengerCountReducer,
+    hotels:AllHotelsReducer,
     flightReducer: flightReducer
 })
 
