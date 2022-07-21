@@ -1,0 +1,12 @@
+.searchinput_round_container{
+    display:flex;
+    
+}
+
+.multisearchinputcontainer{
+    border:3px solid orange;
+    height:fit-content;
+    width:fit-content;
+    margin:25px 0 0 160px;
+    
+}

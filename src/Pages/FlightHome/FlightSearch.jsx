@@ -6,7 +6,8 @@ import SearchInputone from './SearchInputone'
 import SearchInputmulty from './SearchInputmulty'
 import { useSelector ,useDispatch } from 'react-redux/es/exports'
 import { AdultDecrementCount, AdultIncrementCount, ChildDecrementCount, ChildIncrementCount } from '../../Redux/PassengerCountReducer/action'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 
 const FlightSearch =()=>{
@@ -18,6 +19,7 @@ const FlightSearch =()=>{
     const dispatch=useDispatch()
 
     const [radiovalue,setRadioValue]=useState("round");
+    const [hidden,setHidden]=useState(false);
 
     const handleChange=(e)=>{
        // console.log(e.target.value);
@@ -78,19 +80,55 @@ const FlightSearch =()=>{
                     <option value="">First-class</option>
                 </select>
             </div>
-            <div>
-                <span>{passengerCount} {childcount>0 ?"travelers" :"adults"}</span><ChevronUpIcon/><span></span>
+            
+            <div className={styles.travelercount_text} onClick={()=>setHidden(!hidden)}>
+                <div>{passengerCount} {childcount>0 ?"travelers" :"adults"}</div>
+                <div><ChevronUpIcon/></div>
+                
             </div>
+            
         </div>
-        {/* <SearchInputRound/>
-        <SearchInputone/>
-        <SearchInputmulty/> */}
+      {hidden && (
+        <OutsideClickHandler onOutsideClick={()=>setHidden(false)}>
+       <div className={styles.travelercard}>
+       <div className={styles.adultchilddiv}>
+          <div>
+          <h3>Adult</h3>
+          <p>Age 18+</p>
+          </div>
+          <div className={styles.passengercountbtn}>
+         
+         <div><Button colorScheme="blue" size="xs" onClick={handleAdultdecre} >-</Button></div>
+         <div>{adultcount}</div>
+         <div><Button colorScheme="blue" size="xs" onClick={handleAdultincre} >+</Button></div>
+          </div>
+       </div>
+       <div className={styles.adultchilddiv}>
+       <div>
+          <h3>Children</h3>
+          <p>Age 0-17</p>
+          </div>
+          <div className={styles.passengercountbtn}>
+         
+         <div><Button colorScheme="blue" size="xs" onClick={handleChilddecre} >-</Button></div>
+         <div>{childcount}</div>
+         <div><Button colorScheme="blue" size="xs" onClick={handleChildincre} >+</Button></div>
+          </div>
+       </div>
+       <div className={styles.passenger_count_donestatus_div}>
+          <div>{passengerCount} {childcount>0 ?"travelers" :"adults"}</div>
+          <div><Button colorScheme="blue" size="lg" width="180px" onClick={()=>setHidden(false)}>Done</Button></div>
+       </div>
+    </div>
+    </OutsideClickHandler>
+      )}
+        
+        
         {radiovalue==="one" ? <SearchInputone/> :radiovalue==="multy" ? <SearchInputmulty/> :<SearchInputRound/>}
+       
 
-        <Button onClick={handleAdultincre}  colorScheme='blue'>+</Button>
-        <Button onClick={handleAdultdecre}>-</Button>
-        <Button onClick={handleChildincre} >+</Button>
-        <Button onClick={handleChilddecre}>-</Button>
+        
+       
     </div>
   )
 }

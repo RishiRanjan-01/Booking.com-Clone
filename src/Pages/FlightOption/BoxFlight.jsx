@@ -8,7 +8,7 @@ import { getFligths } from '../../Redux/Flight/action'
 export const BoxFlight = () => {
 
     const dispatch = useDispatch();
-    const flight = useSelector(state => state.flight);
+    const flight = useSelector(state => state.flight.flight);
     console.log(flight);
 
 

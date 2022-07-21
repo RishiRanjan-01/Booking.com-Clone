@@ -11,9 +11,9 @@ import FlightHome from "./Pages/FlightHome/FlightHome"
 function App() {
   return (
     <>
-     <FligthOption />
+     {/* <FligthOption />
     <HomePage/>
-    <Hotel/>
+    <Hotel/> */}
     <FlightHome/>
 
     </>
