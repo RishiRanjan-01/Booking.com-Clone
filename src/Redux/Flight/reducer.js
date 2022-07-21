@@ -1,4 +1,4 @@
-import { GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS } from "./actionTypes";
+import { GET_ASC_SORT, GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS, GET_TIME_SORT } from "./actionTypes";
 
 
 const inSate = {
@@ -23,7 +23,7 @@ export const reducer = (state = inSate, action) => {
             return {
                 ...state,
                 flight: payload,
-                isLoading: true,
+                isLoading: false,
                 isError: false
             }
         }
@@ -32,6 +32,22 @@ export const reducer = (state = inSate, action) => {
                 ...state,
                 isLoading: false,
                 isError: true
+            }
+        }
+        case GET_ASC_SORT: {
+            const ascData = state.flight.sort((a, b) => (a.price - b.price));
+            console.log(`reducer ${ascData}`)
+            return {
+                ...state,
+                flight: ascData
+            }
+        }
+        case GET_TIME_SORT: {
+            const timeData = state.flight.sort((a, b) => (a.time1 - b.time1));
+            console.log(`reducer ${timeData}`)
+            return {
+                ...state,
+                flight: timeData
             }
         }
         default: {

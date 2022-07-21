@@ -1,24 +1,33 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Checkbox, Flex, Radio, Stack, Text, VStack } from '@chakra-ui/react'
 import FligthOptionSlider from './SliderFligthOption'
 import { FlightTimes } from './TimesFlight'
-import style from './Flight.module.css'
+
 import { BoxFlight } from './BoxFlight'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
+import Navbar from '../../Components/Navbar'
+
 
 function FligthOption() {
 
+    // const dispatch = useDispatch();
+    // dispatch(getFligths());
+    // useEffect(() => {
+    //     dispatch(getFligths());
 
-    const flight = useSelector(state => state.flight);
-    console.log(flight);
+    // }, []);
 
-    const AscSort = () => {
+    // const flight = useSelector(state => state.flightReducer.flight);
+    // console.log(flight);
 
-        flight.sort((a, b) => (a.price - b.price))
-
+    const radioData = (e) => {
+        console.log(e.target.value)
     }
+
     return (
         <Box>
+            <Navbar />
+
             <Box w='100%' h='200px' bg='#d9d9d9'>
                 {/* serach bar */}
             </Box>
@@ -40,16 +49,24 @@ function FligthOption() {
 
                             {/* Stope filter */}
                             <Stack gap={2} mt='10px'>
-                                <Radio size='lg' name='1' colorScheme='blue' defaultChecked>
+                                <Radio size='lg' name='1' colorScheme='blue'
+                                    value='any'
+                                    onChnage={radioData}>
                                     Any
                                     <Text fontSize='sm'>From INR11,359.31</Text>
                                 </Radio>
-                                <Radio size='lg' name='1' colorScheme='blue'>
+                                <Radio size='lg' name='1' colorScheme='blue'
+                                    value='direct'
+                                    onChnage={radioData}
+                                >
                                     Direct only
 
                                     <Text fontSize='sm'>From INR11,359.31</Text>
                                 </Radio>
-                                <Radio size='lg' name='1' colorScheme='blue' >
+                                <Radio size='lg' name='1' colorScheme='blue'
+                                    value='stop'
+                                    onChnage={radioData}
+                                >
 
                                     1 stop max
                                     <Text fontSize='sm'>From INR11,359.31</Text>
@@ -93,11 +110,7 @@ function FligthOption() {
 
                     {/* Second box */}
                     <Box w='80%' h='auto' border='1px solid yellow'>
-                        <Flex className={style.bestBox} border='1px solid rgb(218, 213, 213)' w='100%' mt='30px'>
-                            <Box>Best</Box>
-                            <Box onClick={AscSort}>Cheapest</Box>
-                            <Box>Fastest</Box>
-                        </Flex>
+
 
 
                         <Box  > <BoxFlight /> </Box>
