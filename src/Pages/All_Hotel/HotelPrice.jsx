@@ -1,7 +1,7 @@
-import React,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getALLHOTELS } from "../../Redux/AllHotels/action";
 import { useDispatch, useSelector } from "react-redux/es/exports";
-import { useLocation, useSearchParams ,Link} from "react-router-dom";
+import { useLocation, useSearchParams, Link } from "react-router-dom";
 import styles from "../All_Hotel/Hotel.module.css";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
@@ -23,8 +23,7 @@ import {
 } from "@chakra-ui/react";
 import HotelSearchBox from "./HotelSearchBox";
 
-const Hotel = () => {
-  
+const HotelPrice = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const urlreviewsratings = searchParams.getAll("reviewsratings");
@@ -36,7 +35,7 @@ const Hotel = () => {
   const [reviewsratings, setreviewsratings] = useState(urlreviewsratings || []);
 
   const [sortBy, setSortBy] = useState(urlSort || "");
-  
+
   const dispatch = useDispatch();
 
   const Hotels = useSelector((state) => state.hotels.allHotels);
@@ -55,22 +54,20 @@ const Hotel = () => {
 
     setreviewsratings(newreviewsratings);
   };
-  
+
   const handleSort = (e) => {
     setSortBy(e.target.value);
   };
-  
-  useEffect(() => {
-    if (reviewsratings ||sortBy) {
 
-      let params={}
-      reviewsratings&&(params.reviewsratings=reviewsratings);
-      sortBy&&(params.sortBy=sortBy);
+  useEffect(() => {
+    if (reviewsratings || sortBy) {
+      let params = {};
+      reviewsratings && (params.reviewsratings = reviewsratings);
+      sortBy && (params.sortBy = sortBy);
       setSearchParams(params);
     }
-  }, [reviewsratings,dispatch, setSearchParams,sortBy]);
-  
-  
+  }, [reviewsratings, dispatch, setSearchParams, sortBy]);
+
   useEffect(() => {
     if (Hotels.length === 0 || location.search) {
       const sortBy = searchParams.get("sortBy");
@@ -86,19 +83,6 @@ const Hotel = () => {
       dispatch(getALLHOTELS(getAllHotelsParams));
     }
   }, [location.search]);
-
-
-
-
-
-
-
-  
-  // useEffect(()=>{
-  //  dispatch(getALLHOTELS())
-  // },[])
-
-
 
   return (
     <div className={styles.All_Hotels_Main}>
@@ -132,52 +116,70 @@ const Hotel = () => {
             <HotelSearchBox/>
             <div className={styles.All_Hotels_All_Content_left_Filter}>
               <div>
-                <Heading size="md">Filter by:</Heading>
+                <Heading size="md">Filter & Sort by:</Heading>
               </div>
               <Divider orientation="horizontal"></Divider>
               <div>
+                <div onChange={handleSort}>
                 <div>
-                  <Heading size="sm">Review score</Heading>
+                  <Heading size="sm">Sort By</Heading>
                 </div>
                 <div>
-                  <Checkbox
-                    size="md"
-                    value="9.5"
-            onChange={handlecheckbox}
-            defaultChecked={reviewsratings.includes(9.5)}
-                  >
-                    Superb: 9+
-                  </Checkbox>
+                  <Checkbox size="md" value="desc"
+          name="sortBy"
+          defaultChecked={sortBy === "desc"}>High to Low</Checkbox>
                 </div>
                 <div>
-                  <Checkbox
-                    size="md"
-                    value="8.5"
-            onChange={handlecheckbox}
-            defaultChecked={reviewsratings.includes(8.5)}
-                  >
-                    Very good: 8+
-                  </Checkbox>
+                  <Checkbox size="md" value="asc"
+          name="sortBy"
+          defaultChecked={sortBy === "asc"}>Low to High</Checkbox>
                 </div>
-                <div>
-                  <Checkbox
-                    size="md"
-                    value="7.5"
-            onChange={handlecheckbox}
-            defaultChecked={reviewsratings.includes(7.5)}
-                  >
-                    Good: 7+
-                  </Checkbox>
                 </div>
+                <Divider orientation="horizontal"></Divider>
                 <div>
-                  <Checkbox
-                    size="md"
-                    value="6.5"
-            onChange={handlecheckbox}
-            defaultChecked={reviewsratings.includes(6.5)}
-                  >
-                    Pleasant: 6+
-                  </Checkbox>
+                  <div>
+                    <Heading size="sm">Review score</Heading>
+                  </div>
+                  <div>
+                    <Checkbox
+                      size="md"
+                      value="9.5"
+                      onChange={handlecheckbox}
+                      defaultChecked={reviewsratings.includes(9.5)}
+                    >
+                      Superb: 9+
+                    </Checkbox>
+                  </div>
+                  <div>
+                    <Checkbox
+                      size="md"
+                      value="8.5"
+                      onChange={handlecheckbox}
+                      defaultChecked={reviewsratings.includes(8.5)}
+                    >
+                      Very good: 8+
+                    </Checkbox>
+                  </div>
+                  <div>
+                    <Checkbox
+                      size="md"
+                      value="7.5"
+                      onChange={handlecheckbox}
+                      defaultChecked={reviewsratings.includes(7.5)}
+                    >
+                      Good: 7+
+                    </Checkbox>
+                  </div>
+                  <div>
+                    <Checkbox
+                      size="md"
+                      value="6.5"
+                      onChange={handlecheckbox}
+                      defaultChecked={reviewsratings.includes(6.5)}
+                    >
+                      Pleasant: 6+
+                    </Checkbox>
+                  </div>
                 </div>
               </div>
             </div>
@@ -211,8 +213,9 @@ const Hotel = () => {
                       <div>Travel Sustainable property</div>
                       <div>
                         <p>
-                        Located 2 km from Railway Station provides accommodation with
-                  a restaurant, free private parking, a bar and a terrace.
+                          Located 2 km from Railway Station provides
+                          accommodation with a restaurant, free private parking,
+                          a bar and a terrace.
                         </p>
                       </div>
                       <div></div>
@@ -245,8 +248,11 @@ const Hotel = () => {
                         <p>Location 9.4</p>
                       </div>
                       <div>
+                        <Heading size="sm">₹{el.price}</Heading>
+                      </div>
+                      <div>
                         <Button colorScheme="blue" borderRadius="none">
-                          Show Price
+                          See availability
                         </Button>
                       </div>
                     </div>
@@ -260,4 +266,4 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default HotelPrice;

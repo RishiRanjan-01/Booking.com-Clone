@@ -1,0 +1,11 @@
+.HotelSeeAvialability_Main{
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.HotelSeeAvialability_Conatiner{
+    border: 1px solid blue;
+    width: 80%;
+    margin: 0 auto;
+}

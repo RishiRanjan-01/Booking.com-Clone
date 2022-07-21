@@ -33,7 +33,8 @@
     width: 97%;
     padding: 8px;
     display: flex;
-    margin: 0 auto;
+    margin: 15px;
+    box-shadow: rgb(143, 189, 241)0px 3px 6px, rgb(16, 202, 235) 0px 3px 6px;
 }
 .All_Hotels_All_Content_Right_Container:hover{
     box-shadow: rgb(9, 12, 199)0px 3px 6px, rgb(16, 202, 235) 0px 3px 6px;
