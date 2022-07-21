@@ -2,10 +2,13 @@ import './App.css';
 import FligthOption from './Pages/FlightOption/FligthOption';
 import './App.css';
 import Navbar from './Components/Navbar';
-import HomePage from './Pages/HomePage';
 import Hotel from './Pages/All_Hotel/Hotel';
 import FlightHome from "./Pages/FlightHome/FlightHome"
+
 import ContactFlight from './Pages/FlightOption/ContactFlight';
+
+import HomePage from './Pages/Home/HomePage';
+
 
 
 
@@ -17,6 +20,11 @@ function App() {
       {/* <HomePage/> */}
       {/* <Hotel/> */}
       {/* <FlightHome/> */}
+     {/* <FligthOption /> */}
+    <HomePage/>
+    {/* <Hotel/> */}
+    {/* <FlightHome/> */}
+
 
     </>
   );
