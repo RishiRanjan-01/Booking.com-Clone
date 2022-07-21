@@ -7,16 +7,61 @@
     
 }
 .InputPlace{
-    width: 38%;
+    width: 35%;
     height: 100%;
     border: 5px solid yellow;
-    padding-left: 2rem;
+    background-color: #fff;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.bedIcon path{
+    fill: rgb(172, 164, 164);
+}
+.InputPlace div{
+    width: 7%;
+    height: 60%;
+    /* border: 1px solid red; */
+    color: grey;
+}
+.InputPlace input{
+    height: 100%;
+    width: 93%;
+    /* border: 1px solid blue; */
+}
+.InputPlace input:focus{
+    outline: none;
+}
+.InputPlace:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .InputDate{
-    width: 25%;
+    width: 26%;
     height: 100%;
     border: 5px solid yellow;
+    /* padding-left: 1rem; */
     border-left: none;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.InputDate div{
+    width: 8%;
+    height: 60%;
+}
+.InputDate input{
+    height: 100%;
+    width: 49.2%;
+    font-size: 18px;  
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.InputDate input:focus{
+    outline: none;
+}
+.InputDate:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .selectOption{
     width: 27%;
@@ -35,12 +80,35 @@
     border: 5px solid yellow;
     border-left: none;
 }
-/* .bedIcon{
+.bedIcon{
     display: flex;
     align-items: center;
-    margin-right: -30px;
-} */
+}
 .streamline_bed{
     /* margin-right: -60px; */
     color: black;
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  input[type="date"]::before {
+	color: #999999;
+	content: attr(placeholder);
+}
+input[type="date"] {
+	color: #ffffff;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: #666666;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+.dash{
+height: 100%;
+width: 10px;
+background-color: yellow;
 }

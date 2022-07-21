@@ -29,7 +29,7 @@ const HomePage = () => {
         <div className={styles.coronaInstruction}>
           <div>
             <div><InfoIcon color={"#ae6c3b"} /></div>
-            <div><p>Get the advice you need. Check the latest COVID-19 restrictions before you travel. Learn more</p></div>
+            {/* <div><p>Get the advice you need. Check the latest COVID-19 restrictions before you travel. Learn more</p></div> */}
           </div>
         </div>
       </div>
