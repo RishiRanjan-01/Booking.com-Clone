@@ -1,10 +1,41 @@
 import { CalendarIcon, PhoneIcon } from "@chakra-ui/icons";
-import { Button, Input, InputGroup, InputLeftElement, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger } from "@chakra-ui/react";
+import {
+  background,
+  Box,
+  Button,
+  Flex,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTrigger,
+  Portal,
+  Stack,
+  Text
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
+import { BsChevronExpand } from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
 
 const SearchBar = () => {
-  // const [date, setDate] = useState(date.now())
+
+  const [countAdult, setCountAdult] = useState(2);
+  const [childCount, setChildCount] = useState(1);
+  const [roomCount, setRoomCount] = useState(1);
+
+    const handleAdultCount = (value) => {
+        // console.log(value)
+
+          setCountAdult(countAdult+value)
+
+    }
 
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, "0");
@@ -13,7 +44,7 @@ const SearchBar = () => {
   let todays = `${yyyy}-${mm}-${dd}`;
   let tommorows = `${yyyy}-${mm}-${dd}`;
 
-  console.log(today);
+  // console.log(today);
 
   return (
     <div className={styles.SearchbarContainer}>
@@ -35,24 +66,55 @@ const SearchBar = () => {
 
       <div className={styles.selectOption}>
         <div>
-          <ion-icon color="gray" name="person"></ion-icon>
+          <BsFillPersonFill color="gray" />
         </div>
-        <Popover isLazy>
+        <div className={styles.contentBox}>
+        <Popover>
           <PopoverTrigger>
-            <Button>Click me</Button>
+            <Button bg="none" _hover={{bg:"none"}}>{`${countAdult} adults . ${childCount} children . ${roomCount} rooms`}</Button>
           </PopoverTrigger>
-          <PopoverContent>
-            <PopoverHeader fontWeight="semibold">
-              Popover placement
-            </PopoverHeader>
-            <PopoverArrow />
-            <PopoverCloseButton />
-            <PopoverBody>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore.
-            </PopoverBody>
-          </PopoverContent>
+          <Portal>
+            <PopoverContent width={"400px"} >
+              <PopoverHeader padding={"1rem"}>
+              <Flex h="10" justifyContent="space-between" >
+                <Text margin={"0.5rem"} color="black" fontWeight="medium">Adults</Text>
+                <Stack direction={"row"}>
+                  <Box  h="100%" onClick={() => countAdult>1 ? handleAdultCount(-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{countAdult}</Box>
+                  <Box h="100%" onClick={() => countAdult < 9 ? handleAdultCount(1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                </Stack >
+              </Flex>
+              </PopoverHeader>
+              <PopoverBody padding={"1rem"}> 
+              <Flex h="10"  justifyContent="space-between" >
+                <Box>
+                <Text color="black" fontWeight="medium">Children</Text>
+                <Text fontSize={"smaller"} color="gray">Ages 0-17</Text>
+                </Box>
+                <Stack direction={"row"}>
+                  <Box h="100%" onClick={() => childCount > 1 ? setChildCount(childCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{childCount}</Box>
+                  <Box h="100%" onClick={() => childCount < 9 ? setChildCount(childCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                </Stack >
+              </Flex>  
+              </PopoverBody>
+              <PopoverFooter padding={"1rem"}>
+              <Flex h="10"  justifyContent="space-between" >
+                <Text margin={"0.5rem"} color="black" fontWeight="medium">Rooms</Text>
+                <Stack direction={"row"}>
+                  <Box h="100%" onClick={() => roomCount > 1 ? setRoomCount(roomCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{roomCount}</Box>
+                  <Box h="100%" onClick={() => roomCount < 30 ? setRoomCount(roomCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                </Stack >
+              </Flex>
+              </PopoverFooter>
+            </PopoverContent>
+          </Portal>
         </Popover>
+        <span><BsChevronExpand color="#539fd6"/></span>
+        </div>  
+        <div>
+        </div>
       </div>
       <button className={styles.searchBtn}>Search</button>
     </div>

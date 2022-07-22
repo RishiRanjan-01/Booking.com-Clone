@@ -45,11 +45,13 @@
 }
 .mainBody{
     width: 70%;
-    height: 300px;
+    height: max-content;
     margin: auto;
     padding: 0;
-    margin-top: 6rem;
+    margin-top: 8rem;
     border: 1px solid red;
+    display: grid;
+    gap: 15px;
 }
 .coronaInstruction{
     height: 4rem;
@@ -67,3 +69,176 @@
     align-items: center;
     justify-content: center;
 }
+.coronaInstruction > p a{
+    color: #0f64db;
+}
+
+/*  OfferSection */
+
+.OfferSection{
+
+    display: grid;
+    gap: 15px;
+}
+.OfferSection h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.OfferSection p{
+    color: gray;
+}
+.offerImageBox{
+    height: 180px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.offerImageBox div:nth-child(1){
+    height: 100%;
+    width: 160px;
+}
+.offerImageBox div:nth-child(1) img{
+    height: 100%;
+    width: 100%;
+}
+.offerImageBox div:nth-child(2){
+    height: 70%;
+    display: grid;
+}
+.offerImageBox div:nth-child(2) h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+.offerImageBox div:nth-child(2) p{
+    color: gray;
+}
+.offerImageBox div:nth-child(2) button{
+    height: 30px;
+    width: 110px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0071c2;
+}
+.offerImageBox div:nth-child(2) button:hover{
+    background-color: #003580;
+}
+
+
+/* exploreIndiaSection */
+.exploreIndiaSection{
+    border: 1px solid blue;
+    display: grid;
+    gap: 10px;
+    
+}
+.exploreIndiaSection h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.exploreIndiaSection p{
+    color: gray;
+}
+.ExploreCarroselImage{
+    height: 250px;
+    width: 100%;
+    border: 1px solid red;
+}
+
+/* Places  of hotels */
+
+.placesImage{
+    height: 550px;
+    width: 100%;
+    margin-top: 13px;
+    border: 1px solid green;
+}
+.placesImageTop{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.placesImageTop div:nth-child(1){
+    padding: 0.5rem;
+    width: 49%;
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/photos/india-gate-new-delhi-picture-id481632685?k=20&m=481632685&s=612x612&w=0&h=HLn7PaQ-ct1DDRnrd_u-qRwLZ_yomkwiNEamlnX7Yvk=");
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+.placesImageTop :hover{
+    -moz-box-shadow: #000000;
+    -webkit-box-shadow: #000000;
+    box-shadow: #000000;
+}
+.placesImageTop div:nth-child(1):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+.placesImageTop div:nth-child(1) > h1{
+    font-size: 35px;
+}
+.placesImageTop div:nth-child(2){
+    width: 49%;
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/photos/bridge-against-sky-during-sunset-picture-id957919884?k=20&m=957919884&s=612x612&w=0&h=p0bb0sY1-xUAs3Oz128eFvat5MzNSMbZYPsdjOnobyc=");
+}
+.placesImageBottom{
+    height: 48%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.placesImageBottom div:nth-child(1){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://www.skymetweather.com/content/wp-content/uploads/2018/07/Rain-in-Rajasthan2-21.jpg");
+    padding: 0.5rem;
+    color: #fff;
+
+}
+.placesImageBottom div:nth-child(1) >h1{
+    font-size: 35px;
+    font-weight: 500;
+    
+}
+.placesImageBottom div:nth-child(2){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://media.istockphoto.com/photos/high-court-in-chennai-india-picture-id931587220?b=1&k=20&m=931587220&s=170667a&w=0&h=ltAWQzx7t8J4ePQb2cr2okfIcn4NANeSi4GVv7zBbOs=");
+    padding: 0.5rem;
+    color: #fff;
+}
+.placesImageBottom div:nth-child(2) >h1{
+    font-size: 35px;
+    font-weight: 500;
+    
+}
+.placesImageBottom div:nth-child(3){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1581533961790-5ab6ecdf8254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFuZ2Fsb3JlJTIwaW5kaWF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    padding: 0.5rem;
+    color: #fff;
+}
+.placesImageBottom div:nth-child(3) >h1{
+    font-size: 35px;
+    font-weight: 500;
+    
+}
+
