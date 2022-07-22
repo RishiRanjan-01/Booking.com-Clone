@@ -18,17 +18,27 @@ import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
 function App() {
   return (
     <>
+
+   
+
       <FlightRoutes />
 
-      {/* <HomePage/> */}
-      {/* <Hotel/> */}
+      
+     
       {/* <FlightHome/> */}
+
 
       {/* <HomePage/> */}
       {/* <Hotel/> */}
       {/* <HotelPrice/> */}
       {/* <HotelSeeAvialability/> */}
-      {/* <FlightHome/> */}
+     
+
+     
+   
+    
+
+
 
 
     </>

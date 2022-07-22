@@ -1,0 +1,22 @@
+.Africa_container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.Carddiv{
+    display: flex;
+    gap:20px;
+}
+.Africa_image{
+height:80px;
+}
+
+.Africa_route{
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.Africa_duration{
+font-size: 13px;
+}
