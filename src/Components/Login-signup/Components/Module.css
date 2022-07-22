@@ -1,0 +1,33 @@
+.nav{
+    border: 0px solid red;
+    display: flex;
+    background-color: rgb(11, 11, 184);
+    color: white;
+    width: 100%;
+    margin-left:-158px;
+    height: 38px;
+
+}
+.first h1{
+    margin-left:250px;
+    font-size: 16px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.second img{
+    height:25px;
+    background-color: blue;
+    margin-left:490px;
+    border-radius:100px ;
+    margin-top: 2px;
+}
+.third img{
+    height:25px;
+    color: azure;
+    margin-left:15px;
+
+
+}
