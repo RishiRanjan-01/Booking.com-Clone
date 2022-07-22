@@ -1,4 +1,4 @@
-import { CalendarIcon, PhoneIcon } from "@chakra-ui/icons";
+import { CalendarIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import React from "react";
 import styles from "./SearchBar.module.css";
