@@ -1,0 +1,22 @@
+.America_container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+}
+
+.Carddiv{
+    display: flex;
+    gap:20px;
+}
+.America_image{
+height:80px;
+}
+
+.America_route{
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.America_duration{
+font-size: 13px;
+}

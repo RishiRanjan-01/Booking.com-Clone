@@ -1,0 +1,8 @@
+.searchinput_round_container{
+    display:flex;
+    padding: 18px 0 0 160px;
+}
+
+.searchinputchilddiv{
+    border:3px solid orange
+}

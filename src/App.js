@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       {/* <FligthOption /> */}
-      <ContactFlight />
+      {/* <ContactFlight /> */}
       {/* <HomePage/> */}
       {/* <Hotel/> */}
       {/* <FlightHome/> */}
@@ -26,8 +26,8 @@ function App() {
     {/* <HomePage/> */}
     {/* <Hotel/> */}
     {/* <HotelPrice/> */}
-    <HotelSeeAvialability/>
-    {/* <FlightHome/> */}
+    {/* <HotelSeeAvialability/> */}
+    <FlightHome/>
 
 
     </>

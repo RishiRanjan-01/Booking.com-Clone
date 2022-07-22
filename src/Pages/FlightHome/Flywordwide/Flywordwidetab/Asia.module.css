@@ -1,0 +1,22 @@
+.Asia_container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+}
+
+.Carddiv{
+    display: flex;
+    gap:20px;
+}
+.Asia_image{
+height:80px;
+}
+
+.Asia_route{
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.Asia_duration{
+font-size: 13px;
+}
