@@ -6,6 +6,8 @@ import { FlightTimes } from './TimesFlight'
 import { BoxFlight } from './BoxFlight'
 // import { useSelector } from 'react-redux'
 import Navbar from '../../Components/Navbar'
+import { FlightFooter } from '../../Components/FlightFooter/FlightFooter'
+import SearchBar from '../../Components/SearchBar'
 
 
 function FligthOption() {
@@ -28,8 +30,10 @@ function FligthOption() {
         <Box>
             <Navbar />
 
+
             <Box w='100%' h='200px' bg='#d9d9d9'>
                 {/* serach bar */}
+                {/* <SearchBar/> */}
             </Box>
 
             <Box w='79%' m='auto' border='1px solid red' h='auto'>
@@ -41,7 +45,7 @@ function FligthOption() {
                     {/* first box */}
 
 
-                    <Box w='45%' h='auto' border='1px solid green'>
+                    <Box w='45%' h='auto' >
                         <Box pl='10px' pt='30px'>
                             <Text fontSize='xl' fontWeight='650'>Filters</Text>
                             <Text as='sup' color='#8c8983' fontSize='14px' >Showing 15 results</Text>
@@ -49,28 +53,41 @@ function FligthOption() {
 
                             {/* Stope filter */}
                             <Stack gap={2} mt='10px'>
-                                <Radio size='lg' name='1' colorScheme='blue'
-                                    value='any'
-                                    onChnage={radioData}>
-                                    Any
-                                    <Text fontSize='sm'>From INR11,359.31</Text>
-                                </Radio>
-                                <Radio size='lg' name='1' colorScheme='blue'
-                                    value='direct'
-                                    onChnage={radioData}
-                                >
-                                    Direct only
+                                <Flex justifyContent='space-between'>
+                                    <Radio size='lg' name='1' colorScheme='blue'
+                                        value='any'
+                                        onChnage={radioData}>
+                                        Any
+                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                    </Radio>
+                                    <Text pr='30px' color='#8c8983' fontSize='sm'>15</Text>
 
-                                    <Text fontSize='sm'>From INR11,359.31</Text>
-                                </Radio>
-                                <Radio size='lg' name='1' colorScheme='blue'
-                                    value='stop'
-                                    onChnage={radioData}
-                                >
+                                </Flex>
+                                <Flex justifyContent='space-between'>
+                                    <Radio size='lg' name='1' colorScheme='blue'
+                                        value='direct'
+                                        onChnage={radioData}
+                                    >
+                                        Direct only
 
-                                    1 stop max
-                                    <Text fontSize='sm'>From INR11,359.31</Text>
-                                </Radio>
+                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                    </Radio>
+                                    <Text pr='30px' color='#8c8983' fontSize='sm'>4</Text>
+
+                                </Flex>
+                                <Flex justifyContent='space-between'>
+                                    <Radio size='lg' name='1' colorScheme='blue'
+                                        value='stop'
+                                        onChnage={radioData}
+                                    >
+
+                                        1 stop max
+                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                    </Radio>
+                                    <Text pr='30px' color='#8c8983' fontSize='sm'>11</Text>
+
+
+                                </Flex>
                             </Stack>
                             {/* duration */}
 
@@ -109,7 +126,7 @@ function FligthOption() {
 
 
                     {/* Second box */}
-                    <Box w='80%' h='auto' border='1px solid yellow'>
+                    <Box w='80%' h='auto'>
 
 
 
@@ -122,6 +139,10 @@ function FligthOption() {
 
 
             </Box>
+
+
+            <FlightFooter />
+
         </Box>
     )
 }
