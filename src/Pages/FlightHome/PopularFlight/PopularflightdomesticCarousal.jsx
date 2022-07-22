@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -40,6 +41,15 @@ const PopularflightdomesticCarousal = () => {
           <button type="button" class="slick-prev" style={{backgroundColor:"blue"}}>Previous</button>
         </Slider>
     </div>
+  )
+}
+
+
+
+
+const PopularflightdomesticCarousal = () => {
+  return (
+    <div>PopularflightdomesticCarousal</div>
   )
 }
 
