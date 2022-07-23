@@ -3,7 +3,10 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import HomePageExploreIndiaSlider from "../../Components/HomePageExploreIndiaSlider";
 import HomePageFotter from "../../Components/HomePageFotter";
+import HomePageHomeGuestLoveSlider from "../../Components/HomePageHomeGuestLoveSlider";
+import HomePageSlider from "../../Components/HomePageSlider";
 import Navbar from "../../Components/Navbar";
 import SearchBar from "../../Components/SearchBar";
 import styles from "./HomePage.module.css";
@@ -92,6 +95,7 @@ const HomePage = () => {
             <p>These popular destinations have a lot to offer</p>
           </div>
           <div className={styles.ExploreCarroselImage}>
+            {/* <HomePageExploreIndiaSlider/> */}
           </div>
         </div>
 
@@ -178,7 +182,7 @@ const HomePage = () => {
 
         <div className={styles.browseByProperty}>
           <h1>Browse by property type</h1>
-
+         {/* <HomePageSlider/> */}
         </div>
 
         {/* Connect with travellers */}
@@ -239,7 +243,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
+        <div>
+          {/* <HomePageHomeGuestLoveSlider/> */}
+          </div>
         {/* Destinaton we Love Scetion */}
 
         <div className={styles.destination}>
