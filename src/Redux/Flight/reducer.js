@@ -1,10 +1,13 @@
-import { GET_ASC_SORT, GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS, GET_TIME_SORT } from "./actionTypes";
+import { loadFlightData, saveFlightDate } from "../../Utils/flightOption/selecteFlight";
+import { GET_ASC_SORT, GET_BEST_SORT, GET_FLIGHT_DATA, GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS, GET_TIME_SORT } from "./actionTypes";
 
 
 const inSate = {
     flight: [],
     isLoading: false,
-    isError: false
+    isError: false,
+    localData: []
+    // loadFlightData("flightTime") ||
 
 }
 
@@ -36,7 +39,7 @@ export const reducer = (state = inSate, action) => {
         }
         case GET_ASC_SORT: {
             const ascData = state.flight.sort((a, b) => (a.price - b.price));
-            console.log(`reducer ${ascData}`)
+
             return {
                 ...state,
                 flight: ascData
@@ -48,6 +51,23 @@ export const reducer = (state = inSate, action) => {
             return {
                 ...state,
                 flight: timeData
+            }
+        }
+        case GET_BEST_SORT: {
+            const bestSort = state.flight.sort((a, b) => (a.id - b.id));
+            console.log(`bestSort ${bestSort}`)
+            return {
+                ...state,
+                flight: bestSort
+            }
+        }
+        case GET_FLIGHT_DATA: {
+            const flightData = payload;
+            console.log(`flight time ${flightData} `)
+            saveFlightDate("flightTime", flightData)
+            return {
+                ...state,
+                localData: flightData
             }
         }
         default: {

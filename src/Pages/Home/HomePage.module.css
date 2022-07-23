@@ -45,11 +45,13 @@
 }
 .mainBody{
     width: 70%;
-    height: 300px;
+    height: max-content;
     margin: auto;
     padding: 0;
-    margin-top: 6rem;
+    margin-top: 8rem;
     border: 1px solid red;
+    display: grid;
+    gap: 15px;
 }
 .coronaInstruction{
     height: 4rem;
@@ -66,4 +68,425 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.coronaInstruction > p a{
+    color: #0f64db;
+}
+
+/*  OfferSection */
+
+.OfferSection{
+
+    display: grid;
+    gap: 15px;
+}
+.OfferSection h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.OfferSection p{
+    color: gray;
+}
+.offerImageBox{
+    height: 180px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.offerImageBox div:nth-child(1){
+    height: 100%;
+    width: 160px;
+}
+.offerImageBox div:nth-child(1) img{
+    height: 100%;
+    width: 100%;
+}
+.offerImageBox div:nth-child(2){
+    height: 70%;
+    display: grid;
+}
+.offerImageBox div:nth-child(2) h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+.offerImageBox div:nth-child(2) p{
+    color: gray;
+}
+.offerImageBox div:nth-child(2) button{
+    height: 30px;
+    width: 110px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0071c2;
+}
+.offerImageBox div:nth-child(2) button:hover{
+    background-color: #003580;
+}
+
+
+/* exploreIndiaSection */
+.exploreIndiaSection{
+    border: 1px solid blue;
+    display: grid;
+    gap: 10px;
+    
+}
+.exploreIndiaSection h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.exploreIndiaSection p{
+    color: gray;
+}
+.ExploreCarroselImage{
+    height: 250px;
+    width: 100%;
+    border: 1px solid red;
+}
+
+
+/* Places  of hotels */
+
+.placesImage{
+    height: 550px;
+    width: 100%;
+    margin-top: 13px;
+}
+.placesImageTop{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.placesImageTop div:nth-child(1){
+    padding: 0.5rem;
+    width: 49%;
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/photos/india-gate-new-delhi-picture-id481632685?k=20&m=481632685&s=612x612&w=0&h=HLn7PaQ-ct1DDRnrd_u-qRwLZ_yomkwiNEamlnX7Yvk=");
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+
+.placesImageTop div:nth-child(1):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+.placesImageTop div:nth-child(2):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+}
+.placesImageTop div:nth-child(1) > h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+.placesImageTop div:nth-child(2){
+    width: 49%;
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/photos/bridge-against-sky-during-sunset-picture-id957919884?k=20&m=957919884&s=612x612&w=0&h=p0bb0sY1-xUAs3Oz128eFvat5MzNSMbZYPsdjOnobyc=");
+    padding: 0.5rem;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+.placesImageTop div:nth-child(2) > h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+.placesImageBottom{
+    height: 48%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.placesImageBottom div:nth-child(1){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://www.skymetweather.com/content/wp-content/uploads/2018/07/Rain-in-Rajasthan2-21.jpg");
+    padding: 0.5rem;
+    color: #fff;
+
+}
+.placesImageBottom div:nth-child(1) >h1{
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+.placesImageBottom div:nth-child(2){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://media.istockphoto.com/photos/high-court-in-chennai-india-picture-id931587220?b=1&k=20&m=931587220&s=170667a&w=0&h=ltAWQzx7t8J4ePQb2cr2okfIcn4NANeSi4GVv7zBbOs=");
+    padding: 0.5rem;
+    color: #fff;
+}
+.placesImageBottom div:nth-child(2) >h1{
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+.placesImageBottom div:nth-child(3){
+    width: 33%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1581533961790-5ab6ecdf8254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFuZ2Fsb3JlJTIwaW5kaWF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    padding: 0.5rem;
+    color: #fff;
+}
+.placesImageBottom div:nth-child(3) >h1{
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+.placesImageBottom div:nth-child(1):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+
+  .placesImageBottom div:nth-child(2):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+  .placesImageBottom div:nth-child(3):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+
+.browseByProperty{
+    height: 300px;
+    width: 100%;
+    border: 1px solid blue;
+    margin-top: 20px;
+
+}
+.browseByProperty h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+
+/* Connect With Travellers */
+
+.connectWithTravellers{
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+.connectWithTravellers h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+.connectWithTravellers > div {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+}
+.travelCard{
+    width: 250px;
+    height: 100%;
+    cursor: pointer;
+}
+.travelCard h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    margin-top: 8px;
+}
+.travelCard p{
+    font-size: 14px;
+    color: gray;
+}
+
+.discountSection{
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(177, 166, 166);
+    background-image: url("https://t3.ftcdn.net/jpg/02/08/63/58/360_F_208635826_OQsq3eHuYDJJDD7Lw04wGMND3rvXDBLR.jpg");
+}
+.ImageBox{
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    gap:12px;
+}
+.globeImage{
+    width: 200px;
+    height: 100%;
+}
+.discountSectionText{
+    width: 450px;
+    height: 100%;
+}
+.discountSectionText h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+}
+.discountSectionText div{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+.discountSectionText div button:nth-child(1){
+    height: 34px;
+    width: 100px;
+    color: #10558a;
+    font-weight: 700;
+    border: 1px solid blue;
+}
+.discountSectionText div button:nth-child(2){
+    height: 34px;
+    width: 100px;
+    color: #10558a;
+    font-weight: 700;
+
+}
+.discountSectionText div button:nth-child(1):hover{
+    background-color:#e4eef5 ;
+}
+.discountSectionText div button:nth-child(2):hover{
+    background-color:#e4eef5 ;
+}
+
+
+/* Destination we Love css */
+
+.destination{
+    height: 370px;
+    width: 100%;
+    margin-top: 13px;
+}
+
+.destination h1{
+    font-size:25px;
+    font-weight: 700;
+    color: black;
+}
+.btnbox{
+    height: 60px;
+    width: 100%;
+    margin-top: 13px;
+    display: flex;
+    gap: 13px;
+
+    align-items: center;
+}
+.btnbox button:nth-child(1){
+    height: 3rem;
+    width: 10%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+.btnbox button:nth-child(2){
+    height: 3rem;
+    width: 10%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+.btnbox button:nth-child(3){
+    height: 3rem;
+    width: 15%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.btnbox button:hover{
+    background-color: #d9d9d9;
+}
+
+.region{
+    width: 100%;
+    /* border: 1px solid green; */
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.region div{
+    height: 270px;
+    width: 200px;
+}
+.region div h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 13px;
+    color: rgb(71, 71, 71);
+}
+.region div h3 :hover{
+    border-bottom: 1px solid black;
+}
+.region div p{
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+}
+
+.btnCurrentFocus{
+    color: #2f81c9;
+    border: 1px solid #2f81c9;
+    background-color: #e4eef5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
