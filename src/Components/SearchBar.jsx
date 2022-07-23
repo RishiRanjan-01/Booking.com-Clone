@@ -1,12 +1,10 @@
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { CalendarIcon, PhoneIcon } from "@chakra-ui/icons";
 import {
   background,
   Box,
   Button,
   Flex,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Popover,
   PopoverArrow,
   PopoverBody,

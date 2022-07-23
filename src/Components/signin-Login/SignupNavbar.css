@@ -1,0 +1,27 @@
+.nav{
+    border: 0px solid red;
+    display: flex;
+    background-color:navy;
+    color: white;
+    margin-left:-358px;
+    width: 187%;
+    height: 70px;
+
+}
+.first svg{
+    margin-left:250px;
+    margin-top:23px;
+    height: 20px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.second img{
+    height:27px;
+    margin-left:790px;
+    border-radius:100px ;
+    margin-top: 19px;
+}
+

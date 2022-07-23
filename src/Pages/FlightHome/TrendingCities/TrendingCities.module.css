@@ -1,0 +1,8 @@
+.TredingCities_heading_container{
+    margin:60px 0 0 160px;
+}
+
+.TredingCities_heading_container>h1{
+    font-size: 30px;
+    font-weight: bold;
+}

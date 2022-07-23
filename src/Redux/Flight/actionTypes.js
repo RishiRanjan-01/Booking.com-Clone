@@ -7,3 +7,7 @@ export const GET_FLIGHT_OPTION_FAILURE = "GET_FLIGHT_OPTION_FAILURE";
 export const GET_ASC_SORT = "GET_ASC_SORT";
 
 export const GET_TIME_SORT = "GET_TIME_SORT";
+
+export const GET_FLIGHT_DATA = "GET_FLIGHT_DATA";
+
+export const GET_BEST_SORT = "GET_BEST_SORT";

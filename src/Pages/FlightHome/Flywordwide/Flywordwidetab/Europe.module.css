@@ -1,0 +1,22 @@
+.Europe_container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+}
+
+.Carddiv{
+    display: flex;
+    gap:20px;
+}
+.Europe_image{
+height:80px;
+}
+
+.Europe_route{
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.Europe_duration{
+font-size: 13px;
+}
