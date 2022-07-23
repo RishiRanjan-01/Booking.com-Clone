@@ -251,9 +251,9 @@ const HotelPrice = () => {
                         <Heading size="sm">₹{el.price}</Heading>
                       </div>
                       <div>
-                        <Button colorScheme="blue" borderRadius="none">
+                    <Link to={`/allhotels/price/${el.id}`}><Button colorScheme="blue" borderRadius="none">
                           See availability
-                        </Button>
+                        </Button></Link>
                       </div>
                     </div>
                   </div>
