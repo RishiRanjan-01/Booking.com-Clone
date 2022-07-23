@@ -15,7 +15,7 @@ function App() {
     <PaymentModal/>
       {/* <PaymentSuccess/> */}
       <HomePage/>
-    FlightRoutes />
+    <FlightRoutes />
  </>
   );
 }
