@@ -25,7 +25,7 @@ import { AiOutlineQuestionCircle } from "react-icons/ai"
 import { useNavigate } from 'react-router-dom'
 
 export const BoxFlight = () => {
-
+    const [index, setIndex] = useState(0);
     const navigate = useNavigate()
 
     const dispatch = useDispatch();
@@ -37,8 +37,13 @@ export const BoxFlight = () => {
     // const [fligthSort, SetFlightSort] = useState(flight);
     const lData = useSelector(state => state.flightReducer.localData);
     const my = lData.Direct1
+    // console.log(`my ${my}`)
 
-    console.log(`Data Local ${my}`)
+    const adultCount = useSelector(state => state.passenger.AdultCount);
+    const childCount = useSelector(state => state.passenger.childCount);
+    // console.log(`adults ${adultCount} child ${childCount}`)
+    // console.log(`Data Local ${my}`)
+    const passengerCount = adultCount + childCount
 
     useEffect(() => {
         dispatch(getFligths());
@@ -67,7 +72,7 @@ export const BoxFlight = () => {
 
 
     const modalData = (el) => {
-        console.log(el)
+        // console.log(el)
 
         onOpen();
         dispatch(getFlightData(el));
@@ -121,7 +126,7 @@ export const BoxFlight = () => {
 
 
     const { isLoading, isError } = useSelector(state => state.flightReducer)
-    const [index, setIndex] = useState(0);
+
 
     return (
         <div>
@@ -412,7 +417,7 @@ export const BoxFlight = () => {
                                                             <Box mt='10px' ml='22px' w='200px' h='80px'>
                                                                 <Box>
                                                                     <Flex mt='10px'>
-                                                                        <Text fontWeight='700' fontSize='xl'>{lData.price}</Text>
+                                                                        <Text fontWeight='700' fontSize='xl'>{lData.price * passengerCount}</Text>
                                                                         <Box ml='10px' mt='5px'><AiOutlineQuestionCircle fontSize="20px" /></Box>
                                                                     </Flex>
 

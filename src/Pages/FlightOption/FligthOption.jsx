@@ -1,17 +1,18 @@
-import React from 'react'
-import { Box, Checkbox, Flex, Radio, Stack, Text, VStack } from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { Box, Checkbox, Flex, Radio, RadioGroup, Stack, Text, VStack } from '@chakra-ui/react'
 import FligthOptionSlider from './SliderFligthOption'
 import { FlightTimes } from './TimesFlight'
-
+import { useSelector } from 'react-redux'
 import { BoxFlight } from './BoxFlight'
 // import { useSelector } from 'react-redux'
 import Navbar from '../../Components/Navbar'
 import { FlightFooter } from '../../Components/FlightFooter/FlightFooter'
-import SearchBar from '../../Components/SearchBar'
+import FlightSearch from '../FlightHome/FlightSearch'
 
 
 function FligthOption() {
-
+    const [value, setValue] = useState('any')
+    console.log(`value data ${value}`)
     // const dispatch = useDispatch();
     // dispatch(getFligths());
     // useEffect(() => {
@@ -19,24 +20,26 @@ function FligthOption() {
 
     // }, []);
 
-    // const flight = useSelector(state => state.flightReducer.flight);
+    const flight = useSelector(state => state.flightReducer.flight);
     // console.log(flight);
 
-    const radioData = (e) => {
-        console.log(e.target.value)
-    }
+
+
 
     return (
         <Box>
             <Navbar />
 
 
-            <Box w='100%' h='200px' bg='#d9d9d9'>
+            <Box w='100%' h='200px' bg='#edede8'>
                 {/* serach bar */}
-                {/* <SearchBar/> */}
+                <Box pt='25px'>
+                    <FlightSearch />
+                </Box>
+
             </Box>
 
-            <Box w='79%' m='auto' border='1px solid red' h='auto'>
+            <Box w='79%' m='auto' h='auto'>
 
 
                 <Flex>
@@ -53,41 +56,45 @@ function FligthOption() {
 
                             {/* Stope filter */}
                             <Stack gap={2} mt='10px'>
-                                <Flex justifyContent='space-between'>
-                                    <Radio size='lg' name='1' colorScheme='blue'
-                                        value='any'
-                                        onChnage={radioData}>
-                                        Any
-                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
-                                    </Radio>
-                                    <Text pr='30px' color='#8c8983' fontSize='sm'>15</Text>
+                                <RadioGroup defaultValue='any' onChange={setValue} value={value}>
+                                    <Flex justifyContent='space-between'>
+                                        <Radio
+                                            size='lg'
+                                            colorScheme='blue'
+                                            value='any'
+                                        >
+                                            Any
+                                            <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                        </Radio>
+                                        <Text pr='30px' color='#8c8983' fontSize='sm'>15</Text>
 
-                                </Flex>
-                                <Flex justifyContent='space-between'>
-                                    <Radio size='lg' name='1' colorScheme='blue'
-                                        value='direct'
-                                        onChnage={radioData}
-                                    >
-                                        Direct only
+                                    </Flex>
+                                    <Flex justifyContent='space-between'>
+                                        <Radio size='lg'
+                                            colorScheme='blue'
+                                            value='direct'
+                                        >
+                                            Direct only
 
-                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
-                                    </Radio>
-                                    <Text pr='30px' color='#8c8983' fontSize='sm'>4</Text>
+                                            <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                        </Radio>
+                                        <Text pr='30px' color='#8c8983' fontSize='sm'>4</Text>
 
-                                </Flex>
-                                <Flex justifyContent='space-between'>
-                                    <Radio size='lg' name='1' colorScheme='blue'
-                                        value='stop'
-                                        onChnage={radioData}
-                                    >
+                                    </Flex>
+                                    <Flex justifyContent='space-between'>
+                                        <Radio size='lg'
+                                            colorScheme='blue'
+                                            value='stop'
+                                        >
 
-                                        1 stop max
-                                        <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
-                                    </Radio>
-                                    <Text pr='30px' color='#8c8983' fontSize='sm'>11</Text>
+                                            1 stop max
+                                            <Text color='#8c8983' fontSize='sm'>From INR11,359.31</Text>
+                                        </Radio>
+                                        <Text pr='30px' color='#8c8983' fontSize='sm'>11</Text>
 
 
-                                </Flex>
+                                    </Flex>
+                                </RadioGroup>
                             </Stack>
                             {/* duration */}
 
