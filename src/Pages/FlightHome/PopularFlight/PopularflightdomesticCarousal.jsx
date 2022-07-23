@@ -46,12 +46,4 @@ const PopularflightdomesticCarousal = () => {
 
 
 
-
-const PopularflightdomesticCarousal = () => {
-  return (
-    <div>PopularflightdomesticCarousal</div>
-  )
-}
-
-
 export default PopularflightdomesticCarousal

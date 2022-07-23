@@ -11,6 +11,8 @@ import HomePage from './Pages/Home/HomePage';
 import HotelPrice from './Pages/All_Hotel/HotelPrice';
 import HotelSeeAvialability from './Pages/All_Hotel/HotelSeeAvialability';
 import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
+import PaymentModal from './Pages/FlightOption/PaymentModal/PaymentModal';
+import PaymentSuccess from './Pages/FlightOption/PaymentSuccess/PaymentSuccess';
 
 
 
@@ -21,11 +23,13 @@ function App() {
 
    
 
-      <FlightRoutes />
+      {/* <FlightRoutes /> */}
 
       
      
       {/* <FlightHome/> */}
+      <PaymentModal/>
+      {/* <PaymentSuccess/> */}
 
 
       {/* <HomePage/> */}

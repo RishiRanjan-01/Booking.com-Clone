@@ -1,0 +1,22 @@
+.PaymentModal_bodycontainer{
+    border: 1px solid transparent;
+    width:400px;
+    height:200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position:absolute;
+    z-index: 1;
+    margin:200px 0 0 550px;
+}
+
+.otp_heading{
+    font-size: 20px;
+    padding:10px 0 0 150px;
+}
+
+.otpbox{
+    padding: 25px  0 0 100px;
+}
+
+.otpclosebtn{
+    margin:30px  0 0 300px;
+}

@@ -7,6 +7,7 @@ import Flywordwide from './Flywordwide/Flywordwide'
 import TrendingCities from './TrendingCities/TrendingCities'
 import Frequestlyquestion from './Frequestlyquestion/Frequestlyquestion'
 import Navbar from '../../Components/Navbar'
+import { FlightFooter } from '../../Components/FlightFooter/FlightFooter'
 
 
 const FlightHome = () => {
@@ -20,6 +21,7 @@ const FlightHome = () => {
          <Transparency/>
          <Flywordwide/>
          <Frequestlyquestion/>
+         <FlightFooter/>
 
     </div>
   )
