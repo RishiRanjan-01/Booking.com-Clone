@@ -14,8 +14,10 @@ function App() {
     {/* <Navbar/> */}
     {/* <PaymentModal/> */}
       {/* <PaymentSuccess/> */}
+
       {/* <HomePage/> */}
     {/* <FlightRoutes/> */}
+
  </>
   );
 }
