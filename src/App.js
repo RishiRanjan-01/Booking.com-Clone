@@ -3,7 +3,6 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Hotel from './Pages/All_Hotel/Hotel';
-import FlightHome from "./Pages/FlightHome/FlightHome"
 
 
 
@@ -25,7 +24,7 @@ function App() {
 
       
      
-      {/* <FlightHome/> */}
+  
 
 
       {/* <HomePage/> */}
