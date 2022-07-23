@@ -6,7 +6,6 @@ import {
   Box,
   Button,
   Flex,
-
   Popover,
   PopoverArrow,
   PopoverBody,
@@ -114,58 +113,13 @@ const SearchBar = () => {
           </Popover>
           <span><BsChevronExpand color="#539fd6" /></span>
         </div>
-
-        <Popover>
-          <PopoverTrigger>
-            <Button bg="none" _hover={{bg:"none"}}>{`${countAdult} adults . ${childCount} children . ${roomCount} rooms`}</Button>
-          </PopoverTrigger>
-          <Portal>
-            <PopoverContent width={"400px"} >
-              <PopoverHeader padding={"1rem"}>
-              <Flex h="10" justifyContent="space-between" >
-                <Text margin={"0.5rem"} color="black" fontWeight="medium">Adults</Text>
-                <Stack direction={"row"}>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => countAdult>1 ? handleAdultCount(-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{countAdult}</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => countAdult < 9 ? handleAdultCount(1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
-                </Stack >
-              </Flex>
-              </PopoverHeader>
-              <PopoverBody padding={"1rem"}> 
-              <Flex h="10"  justifyContent="space-between" >
-                <Box>
-                <Text color="black" fontWeight="medium">Children</Text>
-                <Text fontSize={"smaller"} color="gray">Ages 0-17</Text>
-                </Box>
-                <Stack direction={"row"}>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => childCount > 1 ? setChildCount(childCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{childCount}</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => childCount < 9 ? setChildCount(childCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
-                </Stack >
-              </Flex>  
-              </PopoverBody>
-              <PopoverFooter padding={"1rem"}>
-              <Flex h="10"  justifyContent="space-between" >
-                <Text margin={"0.5rem"} color="black" fontWeight="medium">Rooms</Text>
-                <Stack direction={"row"}>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => roomCount > 1 ? setRoomCount(roomCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{roomCount}</Box>
-                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => roomCount < 30 ? setRoomCount(roomCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
-                </Stack >
-              </Flex>
-              </PopoverFooter>
-            </PopoverContent>
-          </Portal>
-        </Popover>
-        <span><BsChevronExpand color="#539fd6"/></span>
-        </div>  
-
         <div>
         </div>
       </div>
       <button className={styles.searchBtn}>Search</button>
     </div>
   );
+
 };
 
 export default SearchBar;

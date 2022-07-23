@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import styles from "./Popularflighttab.module.css"
-import PopularflightdomesticCarousal from './PopularflightdomesticCarousal'
+import {PopularflightdomesticCarousal} from './PopularflightdomesticCarousal'
 
 const Popularflighttab = () => {
   return (

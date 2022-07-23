@@ -10,12 +10,14 @@ import PaymentSuccess from './Pages/FlightOption/PaymentSuccess/PaymentSuccess';
 function App() {
   return (
     <>
-    <AllHotelsRoutes />
+    {/* <AllHotelsRoutes /> */}
     {/* <Navbar/> */}
-    <PaymentModal/>
+    {/* <PaymentModal/> */}
       {/* <PaymentSuccess/> */}
-      <HomePage/>
-    <FlightRoutes />
+
+      {/* <HomePage/> */}
+    {/* <FlightRoutes/> */}
+
  </>
   );
 }

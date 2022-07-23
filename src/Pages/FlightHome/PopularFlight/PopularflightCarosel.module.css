@@ -1,0 +1,61 @@
+.SliderImage_main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30PX;
+    /* border: 2px solid green; */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    text-align: start;
+    letter-spacing: 0.8px;
+    font-size: 12px;
+}
+.SliderImage_main h1{
+    text-align: center;
+}
+.Slider_Elments_Main{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+.Slider_Elments_Main_Image img{
+width: 100%;
+border-radius: 10px;
+/* border: 2px solid blue; */
+
+
+}
+.Slider_Elements_Main_cont{
+    width: 20%;
+    /* border: 2px solid blue; */
+    padding:10px;
+}
+.Slider_elments_view_all{
+    /* border: 2px solid red; */
+    margin: 30px auto;
+    width: 90%;
+    text-align: center;
+}
+.Slider_elments_view_all button{
+ border: none;
+ width: 100px;
+ padding: 6px;
+ background-color: black;
+ 
+ color: white;
+}
+.Slider_Elments_Main_Brand_Name{
+/* border: 1px solid red; */
+padding: 5px;
+margin-top: 5px;
+}
+.Slider_Elments_Main_Price{
+/* border: 1px solid green; */
+padding: 5px;
+margin-top: 5px;
+font-weight: bolder;
+}
+.SliderIamge_title{
+font-size: 2em !important;
+font-weight: bold !important;
+}
