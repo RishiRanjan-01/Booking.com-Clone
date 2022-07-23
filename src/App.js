@@ -1,42 +1,18 @@
 
-
-import './App.css';
+import "./App.css";
+import AllHotelsRoutes from "./Pages/All_Hotel/AllHotelsRoutes";
 import Navbar from './Components/Navbar';
-import Hotel from './Pages/All_Hotel/Hotel';
-
-
-
 import HomePage from './Pages/Home/HomePage';
-import HotelPrice from './Pages/All_Hotel/HotelPrice';
-import HotelSeeAvialability from './Pages/All_Hotel/HotelSeeAvialability';
 import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
-
-
-
 
 function App() {
   return (
     <>
 
-   
-
+     <AllHotelsRoutes />
+      <HomePage/>
+     <Navbar/>
       <FlightRoutes />
-
-      
-     
-  
-
-
-      {/* <HomePage/> */}
-      {/* <Hotel/> */}
-      {/* <HotelPrice/> */}
-      {/* <HotelSeeAvialability/> */}
-     
-
-     
-   
-    
-
 
 
 
