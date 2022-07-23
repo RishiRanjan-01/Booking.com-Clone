@@ -77,9 +77,9 @@ const SearchBar = () => {
               <Flex h="10" justifyContent="space-between" >
                 <Text margin={"0.5rem"} color="black" fontWeight="medium">Adults</Text>
                 <Stack direction={"row"}>
-                  <Box  h="100%" onClick={() => countAdult>1 ? handleAdultCount(-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{countAdult}</Box>
-                  <Box h="100%" onClick={() => countAdult < 9 ? handleAdultCount(1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => countAdult>1 ? handleAdultCount(-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{countAdult}</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => countAdult < 9 ? handleAdultCount(1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
                 </Stack >
               </Flex>
               </PopoverHeader>
@@ -90,9 +90,9 @@ const SearchBar = () => {
                 <Text fontSize={"smaller"} color="gray">Ages 0-17</Text>
                 </Box>
                 <Stack direction={"row"}>
-                  <Box h="100%" onClick={() => childCount > 1 ? setChildCount(childCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{childCount}</Box>
-                  <Box h="100%" onClick={() => childCount < 9 ? setChildCount(childCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => childCount > 1 ? setChildCount(childCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{childCount}</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => childCount < 9 ? setChildCount(childCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
                 </Stack >
               </Flex>  
               </PopoverBody>
@@ -100,9 +100,9 @@ const SearchBar = () => {
               <Flex h="10"  justifyContent="space-between" >
                 <Text margin={"0.5rem"} color="black" fontWeight="medium">Rooms</Text>
                 <Stack direction={"row"}>
-                  <Box h="100%" onClick={() => roomCount > 1 ? setRoomCount(roomCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
-                  <Box h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{roomCount}</Box>
-                  <Box h="100%" onClick={() => roomCount < 30 ? setRoomCount(roomCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => roomCount > 1 ? setRoomCount(roomCount-1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>-</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" w="10" fontSize={"xl"} color="black" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>{roomCount}</Box>
+                  <Box _hover={{cursor:"pointer"}} h="100%" onClick={() => roomCount < 30 ? setRoomCount(roomCount+1) : null} w="10" fontSize={"3xl"} color="#539fd6" display={"flex"} alignItems="center" justifyContent={"center"} border={"2px solid #539fd6"}>+</Box>
                 </Stack >
               </Flex>
               </PopoverFooter>

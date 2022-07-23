@@ -3,7 +3,7 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Hotel from './Pages/All_Hotel/Hotel';
-import FlightHome from "./Pages/FlightHome/FlightHome"
+// import FlightHome from "./Pages/FlightHome/FlightHome"
 
 
 
@@ -19,27 +19,17 @@ function App() {
   return (
     <>
 
-   
-
-      <FlightRoutes />
-
-      
-     
-      {/* <FlightHome/> */}
-
-
-      {/* <HomePage/> */}
+      {/* <FligthOption /> */}
+      {/* <ContactFlight /> */}
+      <HomePage/>
       {/* <Hotel/> */}
-      {/* <HotelPrice/> */}
-      {/* <HotelSeeAvialability/> */}
-     
-
-     
-   
-    
-
-
-
+      {/* <FlightHome/> */}
+     {/* <FligthOption /> */}
+    {/* <HomePage/> */}
+    {/* <Hotel/> */}
+    {/* <HotelPrice/> */}
+    {/* <HotelSeeAvialability/> */}
+      <FlightRoutes />
 
     </>
   );
