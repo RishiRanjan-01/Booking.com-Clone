@@ -1,4 +1,4 @@
-import { GET_ASC_SORT, GET_BEST_SORT, GET_FLIGHT_DATA, GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS, GET_TIME_SORT } from "./actionTypes"
+import { FLIGHT_CONTACT_DATA, GET_ASC_SORT, GET_BEST_SORT, GET_FLIGHT_DATA, GET_FLIGHT_OPTION_FAILURE, GET_FLIGHT_OPTION_REQUEST, GET_FLIGHT_OPTION_SUCCESS, GET_TIME_SORT } from "./actionTypes"
 import axios from 'axios'
 
 export const getFlight_OptionRequest = () => {
@@ -44,6 +44,14 @@ export const getFlightData = (payload) => {
         payload
     }
 
+}
+
+export const flightContactData = (payload) => {
+
+    return {
+        type: FLIGHT_CONTACT_DATA,
+        payload
+    }
 }
 
 export const getFligths = () => async (dispatch) => {

@@ -12,9 +12,8 @@ function App() {
      <AllHotelsRoutes />
       <HomePage/>
      <Navbar/>
-     
-    {/* <HomePage/> */}
       <FlightRoutes />
+
 
 
     </>

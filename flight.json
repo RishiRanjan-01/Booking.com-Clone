@@ -1,4 +1,14 @@
 {
+    "flightform": [
+        {
+            "id": 1,
+            "email": "rushikeshparte10@gmail.com",
+            "first": "Rushikesh",
+            "gender": "male",
+            "last": "Parte",
+            "tel": "09766432784"
+        }
+    ],
     "flight": [
         {
             "id": 1,
