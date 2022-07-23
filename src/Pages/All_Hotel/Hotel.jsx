@@ -245,9 +245,9 @@ const Hotel = () => {
                         <p>Location 9.4</p>
                       </div>
                       <div>
-                        <Button colorScheme="blue" borderRadius="none">
+                     <Link to="/allhotels/price"><Button colorScheme="blue" borderRadius="none">
                           Show Price
-                        </Button>
+                        </Button></Link>
                       </div>
                     </div>
                   </div>

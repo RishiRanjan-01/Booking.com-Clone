@@ -152,13 +152,13 @@
     border: 1px solid red;
 }
 
+
 /* Places  of hotels */
 
 .placesImage{
     height: 550px;
     width: 100%;
     margin-top: 13px;
-    border: 1px solid green;
 }
 .placesImageTop{
     height: 50%;
@@ -175,11 +175,7 @@
     background-repeat: no-repeat;
     background-size:  cover;
 }
-.placesImageTop :hover{
-    -moz-box-shadow: #000000;
-    -webkit-box-shadow: #000000;
-    box-shadow: #000000;
-}
+
 .placesImageTop div:nth-child(1):hover{
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -189,13 +185,31 @@
     box-shadow: 0px 0px 15px #888888;
     cursor: pointer;
   }
+.placesImageTop div:nth-child(2):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+}
 .placesImageTop div:nth-child(1) > h1{
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 500;
 }
 .placesImageTop div:nth-child(2){
     width: 49%;
     height: 100%;
     background-image: url("https://media.gettyimages.com/photos/bridge-against-sky-during-sunset-picture-id957919884?k=20&m=957919884&s=612x612&w=0&h=p0bb0sY1-xUAs3Oz128eFvat5MzNSMbZYPsdjOnobyc=");
+    padding: 0.5rem;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+.placesImageTop div:nth-child(2) > h1{
+    font-size: 30px;
+    font-weight: 500;
 }
 .placesImageBottom{
     height: 48%;
@@ -213,7 +227,7 @@
 
 }
 .placesImageBottom div:nth-child(1) >h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     
 }
@@ -225,7 +239,7 @@
     color: #fff;
 }
 .placesImageBottom div:nth-child(2) >h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     
 }
@@ -237,8 +251,242 @@
     color: #fff;
 }
 .placesImageBottom div:nth-child(3) >h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     
 }
+.placesImageBottom div:nth-child(1):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
 
+  .placesImageBottom div:nth-child(2):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+  .placesImageBottom div:nth-child(3):hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 0px 0px 15px #888888;
+    cursor: pointer;
+  }
+
+.browseByProperty{
+    height: 300px;
+    width: 100%;
+    border: 1px solid blue;
+    margin-top: 20px;
+
+}
+.browseByProperty h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+
+/* Connect With Travellers */
+
+.connectWithTravellers{
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+.connectWithTravellers h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+.connectWithTravellers > div {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+}
+.travelCard{
+    width: 250px;
+    height: 100%;
+    cursor: pointer;
+}
+.travelCard h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    margin-top: 8px;
+}
+.travelCard p{
+    font-size: 14px;
+    color: gray;
+}
+
+.discountSection{
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(177, 166, 166);
+    background-image: url("https://t3.ftcdn.net/jpg/02/08/63/58/360_F_208635826_OQsq3eHuYDJJDD7Lw04wGMND3rvXDBLR.jpg");
+}
+.ImageBox{
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    gap:12px;
+}
+.globeImage{
+    width: 200px;
+    height: 100%;
+}
+.discountSectionText{
+    width: 450px;
+    height: 100%;
+}
+.discountSectionText h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+}
+.discountSectionText div{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+.discountSectionText div button:nth-child(1){
+    height: 34px;
+    width: 100px;
+    color: #10558a;
+    font-weight: 700;
+    border: 1px solid blue;
+}
+.discountSectionText div button:nth-child(2){
+    height: 34px;
+    width: 100px;
+    color: #10558a;
+    font-weight: 700;
+
+}
+.discountSectionText div button:nth-child(1):hover{
+    background-color:#e4eef5 ;
+}
+.discountSectionText div button:nth-child(2):hover{
+    background-color:#e4eef5 ;
+}
+
+
+/* Destination we Love css */
+
+.destination{
+    height: 370px;
+    width: 100%;
+    margin-top: 13px;
+}
+
+.destination h1{
+    font-size:25px;
+    font-weight: 700;
+    color: black;
+}
+.btnbox{
+    height: 60px;
+    width: 100%;
+    margin-top: 13px;
+    display: flex;
+    gap: 13px;
+
+    align-items: center;
+}
+.btnbox button:nth-child(1){
+    height: 3rem;
+    width: 10%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+.btnbox button:nth-child(2){
+    height: 3rem;
+    width: 10%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+.btnbox button:nth-child(3){
+    height: 3rem;
+    width: 15%;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.btnbox button:hover{
+    background-color: #d9d9d9;
+}
+
+.region{
+    width: 100%;
+    /* border: 1px solid green; */
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.region div{
+    height: 270px;
+    width: 200px;
+}
+.region div h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 13px;
+    color: rgb(71, 71, 71);
+}
+.region div h3 :hover{
+    border-bottom: 1px solid black;
+}
+.region div p{
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+}
+
+.btnCurrentFocus{
+    color: #2f81c9;
+    border: 1px solid #2f81c9;
+    background-color: #e4eef5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -81,6 +81,7 @@ const Navbar = () => {
               role="presentation"
               aria-hidden="true"
               focusable="false"
+              cursor='pointer'
             >
               <path
                 fill="#fff"
@@ -125,7 +126,7 @@ const Navbar = () => {
               <div
                 key={item.text}
                 onClick={(e) => {
-                    setIndex(ind);
+                  setIndex(ind);
                 }}
                 style={{
                   border: index == ind ? "1px solid #fff" : null,

@@ -1,46 +1,21 @@
 
-
-import './App.css';
+import "./App.css";
+import AllHotelsRoutes from "./Pages/All_Hotel/AllHotelsRoutes";
 import Navbar from './Components/Navbar';
-import Hotel from './Pages/All_Hotel/Hotel';
-import FlightHome from "./Pages/FlightHome/FlightHome"
-
-
-
 import HomePage from './Pages/Home/HomePage';
-import HotelPrice from './Pages/All_Hotel/HotelPrice';
-import HotelSeeAvialability from './Pages/All_Hotel/HotelSeeAvialability';
 import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
 import PaymentModal from './Pages/FlightOption/PaymentModal/PaymentModal';
 import PaymentSuccess from './Pages/FlightOption/PaymentSuccess/PaymentSuccess';
 
-
-
-
 function App() {
   return (
     <>
-
-   
-
-      {/* <FlightRoutes /> */}
-
-      
-     
-      {/* <FlightHome/> */}
-      <PaymentModal/>
+ <PaymentModal/>
       {/* <PaymentSuccess/> */}
-
-
-      {/* <HomePage/> */}
-      {/* <Hotel/> */}
-      {/* <HotelPrice/> */}
-      {/* <HotelSeeAvialability/> */}
-     
-
-     
-   
-    
+ <AllHotelsRoutes />
+      <HomePage/>
+     <Navbar/>
+      <FlightRoutes />
 
 
 
