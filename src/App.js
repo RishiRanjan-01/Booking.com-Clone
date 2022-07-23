@@ -10,11 +10,11 @@ function App() {
     <>
 
      <AllHotelsRoutes />
-      <HomePage/>
-     <Navbar/>
+      {/* <HomePage/> */}
+     {/* <Navbar/> */}
      
     {/* <HomePage/> */}
-      <FlightRoutes />
+      {/* <FlightRoutes /> */}
 
 
     </>
