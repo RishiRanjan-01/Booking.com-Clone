@@ -11,6 +11,9 @@ import HomePage from './Pages/Home/HomePage';
 import HotelPrice from './Pages/All_Hotel/HotelPrice';
 import HotelSeeAvialability from './Pages/All_Hotel/HotelSeeAvialability';
 import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
+import HotelCheckout from './Pages/HotelCheckout/HotelCheckout';
+import HotelPaymentPage from './Pages/HotelCheckout/HotelPaymentPage';
+import MainRoutes from './Pages/MainRoutes';
 
 
 
@@ -18,10 +21,11 @@ import { FlightRoutes } from './Pages/FlightOption/FlightRoutes';
 function App() {
   return (
     <>
-
+    <MainRoutes/>
+    {/* <HotelCheckout/> */}
       {/* <FligthOption /> */}
       {/* <ContactFlight /> */}
-      <HomePage/>
+      {/* <HomePage/> */}
       {/* <Hotel/> */}
       {/* <FlightHome/> */}
      {/* <FligthOption /> */}
@@ -29,7 +33,8 @@ function App() {
     {/* <Hotel/> */}
     {/* <HotelPrice/> */}
     {/* <HotelSeeAvialability/> */}
-      <FlightRoutes />
+      {/* <FlightRoutes /> */}
+      {/* <HotelPaymentPage/> */}
 
     </>
   );
