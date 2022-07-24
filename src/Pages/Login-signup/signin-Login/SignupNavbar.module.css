@@ -3,8 +3,8 @@
     display: flex;
     background-color:navy;
     color: white;
-    margin-left:-358px;
-    width: 187%;
+    /* margin-left:-358px; */
+    width: 100%;
     height: 70px;
 
 }

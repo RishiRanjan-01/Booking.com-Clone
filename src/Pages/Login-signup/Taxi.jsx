@@ -10,16 +10,19 @@ import {
 import { Link as Links } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { InfoIcon } from '@chakra-ui/icons'
-import Navbar from "./signin-Login/SignupNavbar"
+import Navbar from "../../Components/Navbar"
+import HomePageFotter from '../../Components/HomePageFotter'
 
 const Taxi = () => {
   return (
-    <Container  maxW='container.4xl'>
-        <Accordion allowToggle bg="white" color={"black"} w="5xl">
+    <>
+    <Navbar/>
+    <Container  maxW='100%'>
+        <Accordion allowToggle bg="white" color={"black"} w="100%">
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box flex='1' textAlign='left'>
+        <Box flex='1' textAlign='center'>
            <InfoIcon mx='2px' mr={"10px"} />  <b > Protecting you during COVID-19 </b>
         </Box>
         <AccordionIcon />
@@ -34,7 +37,7 @@ const Taxi = () => {
   </AccordionItem>
   </Accordion>
   {/* <div style={{background:"white"}} width="5510vw"> */}
-  <Box textAlign={"center"}  h={"250px"} color={"white"} marginLeft={"-346px"} w={"1509px"}>
+  <Box textAlign={"center"}  h={"250px"} color={"white"} w={"100%"}>
 
 <Flex bg={"rgb(245,245,245)"} direction={"column"}  >
 <Heading as='h3' size='md'>
@@ -43,17 +46,17 @@ const Taxi = () => {
   <Text>  
   Easy airport transfers to and from your accommodation
   </Text>
-  <Image textAlign={'center'}  w='900px' h="120px" marginLeft={"285px"}  src='https://i.ibb.co/Y3Z8xB3/image-12.png' alt='Dan Abramov' />
+  <Image textAlign={'center'}  w='100%' h="120px"  src='https://i.ibb.co/Y3Z8xB3/image-12.png' alt='Dan Abramov' />
 </Flex>
 </Box>
   {/* </div> */}
-<Box  >
-  <Image  w='3500px' h="550px"  m="0px 10px" src='https://i.ibb.co/WfjXcJ7/image-13.png' alt='Dan Abramov' />
+<Box>
+  <Image  w='100%' h="550px"  m="0px 10px" src='https://i.ibb.co/WfjXcJ7/image-13.png' alt='Dan Abramov' />
 </Box>
 
-<VStack pt={"8"}>
+<VStack pt={"2"} gap="22">
 
-  <Box textAlign={"center"} h={"400px"} color={"white"} margin={"auto"}  w={"958px"}>
+<Box textAlign={"center"} h={"max-content"} color={"red"} margin={"auto"}  w={"75%"}>
 
   
   <Tabs bg="white" color="black">
@@ -78,11 +81,14 @@ const Taxi = () => {
   </TabPanels>
 </Tabs>
 </Box>
-<Flex h="auto" >
-  <Box w="250px" h="auto" bg="blue.50" marginLeft={"160px"}> <Text fontSize={"15px"} marginLeft={"10px"}>Learn more about our airport taxi service
-See more FAQs on our help page</Text></Box>
+<Flex   h="max-content" w={"75%"} >
+  <Box p="6" w="40%" h="auto" bg="#f5f5f5" > 
+  <Text fontSize={"17px"} fontWeight="bold" color="black">
+    Learn more about our airport taxi service
+     See more FAQs on our help page</Text>
+  </Box>
  
-  <Accordion w="700px" defaultIndex={[0]} allowMultiple>
+  <Accordion w="700px" height={"100%"} defaultIndex={[0]} allowMultiple>
   <AccordionItem>
     <h2>
       <AccordionButton>
@@ -135,27 +141,14 @@ See more FAQs on our help page</Text></Box>
     </h2>
     <AccordionPanel pb={4}>
     You pay for your airport taxi when you complete your booking online. This means that everything is confirmed and taken care of in advance so you don't need to worry about any unpleasant surprises or having cash on you when you arrive. Currently, we accept Visa, American Express and Mastercard, as well as most major debit cards. We also accept payment via PayPal.
-    </AccordionPanel>
-  </AccordionItem>
-</Accordion>
-
-</Flex>
+         </AccordionPanel>
+       </AccordionItem>
+     </Accordion>
+   </Flex>
 </VStack>
-<Stack pt={10}>
-<Box textAlign={"center"} bgColor={"navy"} h={"200px"} color={"white"} marginLeft={"-500px"}  w={"1668px"}>
-<Heading as='h3' size='sm'  marginTop={"25px"}>
-Save time, save money!
-  </Heading>
-  <Text>Sign up and we'll send the best deals to you</Text>
-  <Flex w="500px" m="auto">
-                <Input type="email" h={"38px"} bgColor={"white"} border={"1px solid black"} placeholder="Your email"/>
-                <Button h="38px" w="180px" bg="blue">Submit</Button>
-  </Flex>
-  <Text>Send me a link to get the FREE Booking.com app!</Text>
-</Box>
-
-</Stack>
-    </Container>
+</Container>
+<HomePageFotter/>
+    </>
   )
 }
 

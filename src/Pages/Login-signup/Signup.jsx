@@ -48,9 +48,9 @@ export default function Signup() {
 
     dispatch(register(payload))
     .then((r) => {
-      console.log(r)
+      alert("Registeration Successful!")
       if(r == REGISTER_SUCCESS){
-        Navigate("/register")
+        Navigate("/login")
       }
     })
   };
@@ -83,6 +83,7 @@ export default function Signup() {
               <FormLabel >Password</FormLabel>
                 <InputGroup>
                 <Input  border={"3px solid black"} type={showPassword ? 'text' : 'password'} onChange={(e) => setPassword(e.target.value)} />
+                
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
@@ -111,10 +112,10 @@ export default function Signup() {
             </FormControl>
 
             <Stack spacing={10} pt={2}>
-            <RouterLink to="/" color={'blue.400'}> <Button
+            <Button
               bg={"rgb(105, 138, 242 )"}
                  h={"50px"}
-                 w={"309px"}
+                 w={"100%"}
                  color={"white"}
                  _hover={{
                    bg: "blue.700",
@@ -123,7 +124,7 @@ export default function Signup() {
                 >
               Create account
               </Button>
-              </RouterLink>
+
 
             </Stack>
             <Stack pt={2}>
