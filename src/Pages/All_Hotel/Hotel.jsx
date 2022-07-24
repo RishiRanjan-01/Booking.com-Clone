@@ -5,6 +5,7 @@ import { useLocation, useSearchParams ,Link} from "react-router-dom";
 import styles from "../All_Hotel/Hotel.module.css";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
+import Navbar from "../../Components/Navbar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -101,6 +102,9 @@ const Hotel = () => {
 
 
   return (
+    <>
+    <Navbar/>
+
     <div className={styles.All_Hotels_Main}>
       <div className={styles.All_Hotels_All_Container}>
         <div className={styles.All_Hotels_Breadcrums}>
@@ -257,6 +261,7 @@ const Hotel = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
