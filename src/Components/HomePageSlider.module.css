@@ -1,7 +1,8 @@
 .SliderImage_main{
-    width: 90%;
+    width: 50%;
+    height: 1vh;
     margin: 0 auto;
-    padding: 30PX;
+    /* padding: 30PX; */
     /* border: 2px solid green; */
     font-family: Arial, Helvetica, sans-serif;
     line-height: normal;

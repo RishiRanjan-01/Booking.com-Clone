@@ -34,6 +34,8 @@ export const PayForm = () => {
     const [access, setAccess] = useState(false);
     const [full, setFull] = useState(true);
 
+
+
     const handlechange = (e, props) => {
         // console.log(e.target.value)
         // console.log(e.target.name)
@@ -50,14 +52,14 @@ export const PayForm = () => {
 
         }
 
-        if (value.length < 12 && name === 'number') {
-            setError(`You Enter ${value.length} no you have to enter 12 no `)
-        }
+        // if (value.length < 12 && name === 'number') {
+        //     setError(`You Enter ${value.length} no you have to enter 12 no `)
+        // }
 
-        if (value.length === 12 && name === 'number') {
-            setFull(false)
+        // if (value.length >= 12 && name === 'number') {
+        //     setFull(false)
 
-        }
+        // }
 
 
         if (value.length >= 12 && name === 'number') {
@@ -75,7 +77,7 @@ export const PayForm = () => {
 
         setFull(true)
         setAccess(true)
-
+         navigate("/flightcontact/flightpayment/PaymentSuccess")
 
 
 

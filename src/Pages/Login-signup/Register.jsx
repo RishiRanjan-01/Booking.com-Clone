@@ -16,9 +16,9 @@ import {
   } from "@chakra-ui/react";
 import { useState } from "react";
   import { Link as RouterLink } from "react-router-dom";
-  import Navbar from "../Components/Navbar";
+  import Navbar from "../Login-signup/signin-Login/SignupNavbar";
   import {useDispatch} from "react-redux"
-import { setloginEmailData } from "../Redux/AuthReducer/action";
+import { setloginEmailData } from "../../Redux/Authentication/action";
   
   export default function Register() {
     const [email, setEmail] = useState("");

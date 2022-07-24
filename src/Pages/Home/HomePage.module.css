@@ -49,14 +49,14 @@
     margin: auto;
     padding: 0;
     margin-top: 8rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     gap: 15px;
 }
 .coronaInstruction{
     height: 4rem;
     padding: 1.2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     gap: 12px;
     align-items: center;
@@ -133,7 +133,7 @@
 
 /* exploreIndiaSection */
 .exploreIndiaSection{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: grid;
     gap: 10px;
     
@@ -149,7 +149,19 @@
 .ExploreCarroselImage{
     height: 250px;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 22px;
+}
+.ExploreCarroselImage div{
+    height: 90%;
+    width: 15%;
+    cursor: pointer;
+
+}
+.ExploreCarroselImage div h3{
+    font-weight: 600;
+    color: black;
 }
 
 
@@ -287,7 +299,7 @@
 .browseByProperty{
     height: 300px;
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-top: 20px;
 
 }
@@ -368,7 +380,7 @@
     width: 100px;
     color: #10558a;
     font-weight: 700;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .discountSectionText div button:nth-child(2){
     height: 34px;
@@ -489,4 +501,25 @@
     border: 1px solid #2f81c9;
     background-color: #e4eef5;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/*  Browser Carrosel */
+.browseCarrosel{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 14px;
+    cursor: pointer;
+
+}
+.browseCarrosel div{
+    height: 100%;
+    width: 25%;
+
+}
+.browseCarrosel div h3{
+    font-weight: 600;
+    color: black;
 }

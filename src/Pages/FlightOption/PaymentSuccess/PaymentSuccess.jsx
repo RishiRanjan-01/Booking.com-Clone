@@ -2,8 +2,10 @@ import React from 'react'
 import styles from "./PaymentSuccess.module.css";
 import {TiTickOutline} from "react-icons/ti"
 import {Button} from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 const PaymentSuccess = () => {
+  const navigate = useNavigate()
   return (
     <div>
         <div className={styles.flightbookingtopmessage}>
@@ -15,7 +17,7 @@ const PaymentSuccess = () => {
             </div>
             <div>Your flight booking has been successfully completed</div>
 
-            <Button colorScheme="red" className={styles.flightsuccessbtn}>Back to Home Page</Button>
+            <Button colorScheme="red" className={styles.flightsuccessbtn} onClick={() => navigate("/")} >Back to Home Page</Button>
         </div>
        
     </div>

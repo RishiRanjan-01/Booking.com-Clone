@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../All_Hotel/HotelSeeAvialability.module.css";
 import { getALLHOTELS } from "../../Redux/AllHotels/action";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import HotelSearchBox from "./HotelSearchBox";
 import { BsHeart, BsFillShareFill,BsFillPersonFill } from "react-icons/bs";
@@ -30,11 +30,20 @@ import { FaParking } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 import { IoIosRestaurant, IoIosBed } from "react-icons/io";
 import { GiCoffeeCup, GiModernCity, GiPathDistance } from "react-icons/gi";
+import HomePageFotter from "../../Components/HomePageFotter";
+import Navbar from "../../Components/Navbar";
+
 
 const HotelSeeAvialability = () => {
   const { id } = useParams();
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate()
+
+  const handlenavigate = () => {
+    navigate(`/allhotels/price/${id}/Hotel-Checkout`)
+  }
 
   const Hotels = useSelector((state) => state.hotels.allHotels);
 
@@ -54,6 +63,8 @@ const HotelSeeAvialability = () => {
   }, [Hotels, id]);
 
   return (
+    <>
+    <Navbar/>
     <div className={styles.HotelSeeAvialability_Main}>
       <div className={styles.HotelSeeAvialability_Conatiner}>
         <div
@@ -87,7 +98,7 @@ const HotelSeeAvialability = () => {
                       <BsFillShareFill />
                     </div>
                     <div>
-                      <Button size="sm" borderRadius="none" colorScheme="blue">
+                      <Button size="sm" borderRadius="none" colorScheme="blue" onClick={handlenavigate}>
                         Reserve
                       </Button>
                     </div>
@@ -361,7 +372,7 @@ const HotelSeeAvialability = () => {
                 </div>
               </div>
               <div>
-                <Button colorScheme="blue" borderRadius="none" width="100%">
+                <Button colorScheme="blue" borderRadius="none" width="100%" onClick={handlenavigate}>
                   Reserve
                 </Button>
               </div>
@@ -2345,7 +2356,7 @@ const HotelSeeAvialability = () => {
                 styles.HotelSeeAvialability_Availability_Form_Will_Reserve
               }
             >
-              <div><Button colorScheme="blue" width="95%" borderRadius="none">I'll reserve</Button></div>
+              <div><Button colorScheme="blue" width="95%" borderRadius="none" onClick={handlenavigate}>I'll reserve</Button></div>
               <div>Confirmation is immediate</div>
               <div>No booking or credit card fees!</div>
               <div>No credit card needed!</div>
@@ -2587,6 +2598,8 @@ const HotelSeeAvialability = () => {
         </div>
       </div>
     </div>
+    <HomePageFotter/>
+    </>
   );
 };
 

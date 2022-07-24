@@ -3,13 +3,13 @@ import React, { useRef } from "react";
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RoutingItems = [
   {
     logo: <ion-icon name="bed-outline"></ion-icon>,
     text: "Stays",
-    url: "",
+    url: "/",
   },
   {
     logo: (
@@ -55,11 +55,23 @@ const RoutingItems = [
   },
 ];
 
+const linkArr = ["/","/Flights","","","",""]
+
 const Navbar = () => {
   const [index, setIndex] = useState(0);
 
   // let boxRef = useRef();
+  const navigate = useNavigate()
 
+  const handleNavigate = (ind) => {
+    for(let i=0; i<linkArr.length; i++){
+      if(ind === i){
+        navigate(linkArr[i])
+      }
+    }
+
+  }
+ 
   const handleClick = (e, index) => {
     // console.log(e,index)
     // boxRef.current = index
@@ -112,8 +124,8 @@ const Navbar = () => {
             </div>
             <div className={styles.btnbox}>
               <button>List Your Property</button>
-              <button>Register</button>
-              <button>Sign in</button>
+              <button onClick={() => navigate("/signup")}>Register</button>
+              <button onClick={() => navigate("/register")}>Sign in</button>
             </div>
           </div>
         </div>
@@ -122,11 +134,12 @@ const Navbar = () => {
 
         <div className={styles.routingbox}>
           {RoutingItems.map((item, ind) => {
-            return (
-              <div
+            return ( 
+                <div
                 key={item.text}
                 onClick={(e) => {
                   setIndex(ind);
+                  handleNavigate(ind)
                 }}
                 style={{
                   border: index == ind ? "1px solid #fff" : null,
@@ -135,7 +148,7 @@ const Navbar = () => {
               >
                 <span>{item.logo}</span>
                 <h4>{item.text}</h4>
-              </div>
+              </div>        
             );
           })}
         </div>

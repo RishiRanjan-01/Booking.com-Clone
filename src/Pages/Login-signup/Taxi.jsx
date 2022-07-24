@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
+
 import {
   Accordion,
   AccordionItem,
@@ -10,11 +10,11 @@ import {
 import { Link as Links } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { InfoIcon } from '@chakra-ui/icons'
+import Navbar from "./signin-Login/SignupNavbar"
 
 const Taxi = () => {
   return (
     <Container  maxW='container.4xl'>
-        <Navbar></Navbar>
         <Accordion allowToggle bg="white" color={"black"} w="5xl">
   <AccordionItem>
     <h2>

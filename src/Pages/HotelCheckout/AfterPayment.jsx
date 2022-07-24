@@ -21,7 +21,7 @@ import {
   import { useSelector } from "react-redux";
   import { useNavigate } from 'react-router-dom';
 
-function BasicUsage({username}) {
+function BasicUsage({username,hotelData}) {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const navigate = useNavigate();
@@ -69,10 +69,10 @@ function BasicUsage({username}) {
           <Box width={"max-content"} m={"auto"}><BsFillCheckCircleFill color='green' size={"40px"}/></Box>
           <Heading as={"h1"} textAlign="Center">Your Booking is Confirmed</Heading>
           <Flex marginTop="4" gap={"15px"} alignItems="center">
-              <Image borderRadius={"7px"} height={"80px"} width="80px" src="https://cf.bstatic.com/xdata/images/hotel/square200/124866272.webp?k=049d28d86817ea68bb85c5c76dea796fd8bca0866fe13fc7e1c8d52769aa32a1&o=" alt="" />
+              <Image borderRadius={"7px"} height={"80px"} width="80px" src={hotelData.roomimage} alt="" />
               <Box>
-                 <Text fontWeight={"bold"}>Jaipur Hotel New - Heritage Hotel</Text>
-                 <Text>07- Film Colony, choura rasta Jaipur, 302002 Jaipur, India</Text>
+                 <Text fontWeight={"bold"}>{hotelData.Name}</Text>
+                 <Text>{hotelData.Loaction}</Text>
               </Box>
           </Flex>
         </Box>

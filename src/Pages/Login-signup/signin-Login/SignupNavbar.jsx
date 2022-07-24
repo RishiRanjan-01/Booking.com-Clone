@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import "./Module.css"
+// import "./Module.css"
 import { Icon } from '@chakra-ui/react'
 import { QuestionIcon, QuestionOutlineIcon } from '@chakra-ui/icons'
 // import {QuestionOutlineIcon} from 'react-icons'

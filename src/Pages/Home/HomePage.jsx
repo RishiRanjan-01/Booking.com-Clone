@@ -2,7 +2,7 @@ import { InfoIcon } from "@chakra-ui/icons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomePageExploreIndiaSlider from "../../Components/HomePageExploreIndiaSlider";
 import HomePageFotter from "../../Components/HomePageFotter";
 import HomePageHomeGuestLoveSlider from "../../Components/HomePageHomeGuestLoveSlider";
@@ -11,10 +11,13 @@ import Navbar from "../../Components/Navbar";
 import SearchBar from "../../Components/SearchBar";
 import styles from "./HomePage.module.css";
 
+
 const HomePage = () => {
   const [region, setRegion] = useState(true);
   const [cities, setCities] = useState(false);
   const [interest, setInterest] = useState(false);
+
+  const navigate = useNavigate()
 
   const handleRegion = () => {
     setRegion(true);
@@ -33,6 +36,10 @@ const HomePage = () => {
     setCities(false);
     setInterest(true);
   };
+
+  const handleClick = () => {
+    navigate("/allhotels")
+  }
 
   return (
     <div>
@@ -96,6 +103,36 @@ const HomePage = () => {
           </div>
           <div className={styles.ExploreCarroselImage}>
             {/* <HomePageExploreIndiaSlider/> */}
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/684657.webp?k=66dc5035b43e9bb86b756e381e4fec2558064af4a63a8af17836725a854c03ee&o=" alt="" />
+              <h3>Jaipur</h3>
+              <p>1,558 properties</p>
+            </div>
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/684938.webp?k=9d07ff707ce59768769b5e9a5381a4c705d921209dafd8fd0e2f1a6acdf0c68a&o=" alt="" />
+              <h3>Udaipur</h3>
+              <p>816 properties</p>
+            </div>
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/684674.webp?k=8d21ea7c841f39e95cfffdeafc754aff157c64b8422c5002e2433ba26801324c&o=" alt="" />
+              <h3>Jhodpur</h3>
+              <p>326 properties</p>
+            </div>
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/684765.webp?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" alt="" />
+              <h3>New Delhi</h3>
+              <p>2,913 properties</p>
+            </div>
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/684646.webp?k=5f82ed7ee33843d06b0acf82d19d440f16aa561a107d320bf1ecf8769e373216&o=" alt="" />
+              <h3>Jaisalmer</h3>
+              <p>400 properties</p>
+            </div>
+            <div>
+              <img src="https://cf.bstatic.com/xdata/images/city/square250/637293.webp?k=5e58ee01e1733b832e2e5b19074226ae6ff3207dd6bb719d0fec416b7af66d5f&o=" alt="" />
+              <h3>Pushkar</h3>
+              <p>281 properties</p>
+            </div>
           </div>
         </div>
 
@@ -103,7 +140,7 @@ const HomePage = () => {
 
         <div className={styles.placesImage}>
           <div className={styles.placesImageTop}>
-            <div>
+            <div onClick={handleClick}>
               <h1 style={{ display: "flex", gap: "7px", alignItems: "center" }}>
                 New Delhi{" "}
                 <span>
@@ -117,7 +154,7 @@ const HomePage = () => {
               </h1>
               <p>2,915 properties</p>
             </div>
-            <div>
+            <div onClick={handleClick}>
             <h1 style={{ display: "flex", gap: "7px", alignItems: "center" }}>
                 Mumbai{" "}
                 <span>
@@ -132,8 +169,8 @@ const HomePage = () => {
               <p>1,651 properties</p>
             </div>
           </div>
-          <div className={styles.placesImageBottom}>
-            <div>
+          <div className={styles.placesImageBottom} >
+            <div onClick={handleClick}>
               <h1 style={{ display: "flex", gap: "7px", alignItems: "center" }}>
                 Kolkata{" "}
                 <span>
@@ -147,7 +184,7 @@ const HomePage = () => {
               </h1>
               <p>2,487 properties</p>
             </div>
-            <div>
+            <div onClick={handleClick}>
               <h1 style={{ display: "flex", gap: "7px", alignItems: "center" }}>
                 Chennai{" "}
                 <span>
@@ -161,7 +198,7 @@ const HomePage = () => {
               </h1>
               <p>3,547 properties</p>
             </div>
-            <div>
+            <div onClick={handleClick}>
               <h1 style={{ display: "flex", gap: "7px", alignItems: "center" }}>
                 Banglore{" "}
                 <span>
@@ -183,6 +220,28 @@ const HomePage = () => {
         <div className={styles.browseByProperty}>
           <h1>Browse by property type</h1>
          {/* <HomePageSlider/> */}
+          <div className={styles.browseCarrosel}>
+            <div>
+              <img src="https://q-xx.bstatic.com/xdata/images/xphoto/300x240/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=" alt="" />
+              <h3>Hotels</h3>
+              <p>877,251 hotels</p>
+            </div>
+            <div>
+              <img src="https://q-xx.bstatic.com/xdata/images/hotel/300x240/119467716.jpeg?k=f3c2c6271ab71513e044e48dfde378fcd6bb80cb893e39b9b78b33a60c0131c9&o=" alt="" />
+              <h3>Apartment</h3>
+              <p>906,009 apartments</p>
+            </div>
+            <div>
+              <img src="https://r-xx.bstatic.com/xdata/images/xphoto/300x240/45450084.jpeg?k=f8c2954e867a1dd4b479909c49528531dcfb676d8fbc0d60f51d7b51bb32d1d9&o=" alt="" />
+              <h3>Resorts</h3>
+              <p>17,978 resorts</p>
+            </div>
+            <div>
+              <img src="https://r-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=" alt="" />
+              <h3>Villas</h3>
+              <p>476,432 villas</p>
+            </div>
+          </div>
         </div>
 
         {/* Connect with travellers */}
