@@ -23,7 +23,7 @@ import img3 from './Payimg/discover.svg'
 import img4 from './Payimg/jcb.svg'
 import img5 from './Payimg/visa.svg'
 import input1 from './Payimg/input1.svg'
-
+import PaymentModal from './PaymentModal/PaymentModal'
 
 
 
@@ -31,55 +31,88 @@ export const PayForm = () => {
 
     const navigate = useNavigate();
     const [error, setError] = useState('');
-    const [access, setAccess] = useState(false);
-    const [full, setFull] = useState(true);
+    const [errorEx, setErrorEx] = useState('');
+    const [cvvEr, setCvvEr] = useState('');
+    const [card, setCard] = useState(false);
+    const [exDate, setExDate] = useState(false);
+    const [cvvS, setCvvS] = useState(false);
+
 
     const handlechange = (e, props) => {
         // console.log(e.target.value)
-        // console.log(e.target.name)
+        console.log(e.target.name)
         // var number = e.target.name === 'number';
 
 
         const { name, value } = e.target;
-        console.log(value.length)
-        console.log(name)
         // setFull(value.length)
-
+        // number ----------------------------------------------
         if (value.length === 0 && name === 'number') {
-            setAccess(false);
+            setError(false);
 
         }
 
         if (value.length < 12 && name === 'number') {
             setError(`You Enter ${value.length} no you have to enter 12 no `)
-        }
-
-        if (value.length === 12 && name === 'number') {
-            setFull(false)
 
         }
-
 
         if (value.length >= 12 && name === 'number') {
-            setError(`You can enter 12 number you can pay now `)
 
-
+            setError(false);
 
         }
 
+        // ex--------------------------------------------------------------
+
+        if (value.length === 0 && name === 'exdate') {
+            setErrorEx(false);
+
+        }
+
+        if (value.length < 4 && name === 'exdate') {
+            setErrorEx(`You Enter ${value.length} no you have to enter 4 no `)
+
+        }
+
+        if (value.length >= 4 && name === 'exdate') {
+
+            setErrorEx(false);
+
+        }
+
+        // cvv========================================================
+        if (value.length === 0 && name === 'cvv') {
+            setCvvEr(false);
+
+        }
+
+        if (value.length < 3 && name === 'cvv') {
+            setCvvEr(`You Enter ${value.length} no you have to enter 4 no `)
+
+        }
+
+        if (value.length >= 3 && name === 'cvv') {
+
+            setCvvEr(false);
+
+        }
 
     }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setFull(true)
-        setAccess(true)
 
+        setExDate(true)
+        setCvvS(true)
+        setCard(true)
 
 
 
     }
+
     return (
         <Box>
             <form onSubmit={handleSubmit}>
@@ -137,7 +170,7 @@ export const PayForm = () => {
                                 />
 
                             </InputGroup>
-                            <FormHelperText color='red' >{access ? error : ''}</FormHelperText>
+                            <FormHelperText color='red' >{card ? error : ''}</FormHelperText>
 
                         </FormControl>
 
@@ -152,11 +185,13 @@ export const PayForm = () => {
                                         placeholder='MM/YY'
                                         borderRadius='none'
                                         h='35px'
-                                        type='number'
+                                        type='tel'
                                         name='exdate'
+                                        maxLength={4}
                                         outline='black solid 1px'
                                         onChange={handlechange}
                                     />
+                                    <FormHelperText color='red' >{exDate ? errorEx : ''}</FormHelperText>
 
                                 </FormControl>
                             </Box>
@@ -167,12 +202,15 @@ export const PayForm = () => {
                                     <Input
                                         borderRadius='none'
                                         h='35px'
-                                        type='number'
+                                        type='tel'
                                         name='cvv'
+                                        maxLength={3}
                                         outline='black solid 1px'
                                         onChange={handlechange}
 
                                     />
+                                    <FormHelperText color='red' >{cvvS ? cvvEr : ''}</FormHelperText>
+
                                 </FormControl>
                             </Box>
                         </Flex>
@@ -199,7 +237,7 @@ export const PayForm = () => {
                         <Box>
                             <FormControl>
 
-                                <Button
+                                {/* <Button
                                     type='submit'
                                     // isDisabled={access ? false : true}
                                     borderRadius='0'
@@ -208,7 +246,9 @@ export const PayForm = () => {
                                     p='25px 45px'
                                     color='white'
                                     variant='solid'>
-                                    Pay Now</Button>
+                                    Pay Now</Button> */}
+
+                                <PaymentModal exDate={errorEx} cvvS={cvvEr} card={error} />
                             </FormControl>
                         </Box>
 
@@ -217,7 +257,6 @@ export const PayForm = () => {
                     </Flex>
                 </Stack>
             </form>
-
             <Box borderTop='1px solid #8c8983' mt='20px' mb='30px'>
                 <Text fontSize='sm' color='#8c8983' pt='10px' >
                     By making this booking, you'll enter into agreements with:

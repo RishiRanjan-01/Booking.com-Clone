@@ -5,7 +5,6 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
     Text,
     ModalBody,
     ModalCloseButton,
