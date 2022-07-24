@@ -14,7 +14,7 @@ const HomePageHomeGuestLoveSlider = () => {
   
 return (
     <div className={styles.SliderImage_main}>
-      <h1 className={styles.SliderIamge_title}>Guest Love</h1>
+      {/* <h1 className={styles.SliderIamge_title}>Guest Love</h1> */}
       <div className={styles.Slider_Elments_Main}>
       <Slider {...mens}>
         <div className={styles.Slider_Elements_Main_cont}>

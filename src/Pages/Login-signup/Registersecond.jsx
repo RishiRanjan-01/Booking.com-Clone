@@ -18,10 +18,10 @@ import {
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
   import {Link as RouterLink, Navigate, useNavigate} from 'react-router-dom';
   import { useReducer } from 'react';
-  import { REGISTER_SUCCESS } from '../Redux/AuthReducer/actionTypes';
-  import { loginApi, register } from '../Redux/AuthReducer/action';
+  import { REGISTER_SUCCESS } from "../../Redux/Authentication/actionTypes";
+  import { loginApi, register } from '../../Redux/Authentication/action';
   import {useDispatch,useSelector} from 'react-redux';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Login-signup/signin-Login/SignupNavbar';
   function reducer(state,action){
     switch(action.type){
   

@@ -18,10 +18,11 @@ import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import {Link as RouterLink, Navigate, useNavigate} from 'react-router-dom';
 import { useReducer } from 'react';
-import { REGISTER_SUCCESS } from '../Redux/AuthReducer/actionTypes';
-import { register } from '../Redux/AuthReducer/action';
+import { REGISTER_SUCCESS } from "../../Redux/Authentication/actionTypes"
+// import { REGISTER_SUCCESS } from '../Redux/AuthReducer/actionTypes';
+import { register } from '../../Redux/Authentication/action';
 import {useDispatch,useSelector} from 'react-redux';
-import Navbar from '../Components/Navbar';
+import Navbar from "./signin-Login/SignupNavbar"
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);

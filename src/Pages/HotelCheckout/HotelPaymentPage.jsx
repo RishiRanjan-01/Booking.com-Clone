@@ -9,7 +9,7 @@ import { BsFillHandThumbsUpFill } from "react-icons/bs";
 import { BsTruck } from "react-icons/bs";
 import { BiRestaurant } from "react-icons/bi";
 import { MdOutlineLocalParking } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { AiFillLock }  from "react-icons/ai";
 import { Spinner, Tooltip } from '@chakra-ui/react';
@@ -17,11 +17,37 @@ import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { loadFlightData } from '../../Utils/flightOption/selecteFlight';
 import BasicUsage from './AfterPayment';
+import axios from "axios"
 
 const HotelPaymentPage = () => {
 
     const userdata = loadFlightData("userdata")
     // console.log("userdata",userdata)
+
+    const [SingleHotel, setSingleHotel] = useState({})
+
+
+    const navigate = useNavigate();
+
+    const {id} = useParams()
+
+    
+    const getData = () => {
+        axios.get(` http://localhost:8080/allHotels/${id}`)
+        .then((r) => {
+            setSingleHotel(r.data)
+        })
+        .catch((er) => {
+            console.log(er)
+        })
+    }
+
+    // console.log(SingleHotel)
+
+    useEffect(() => {
+        getData();
+    },[id])
+
 
 
     
@@ -134,7 +160,7 @@ const HotelPaymentPage = () => {
 
                     <div className={styles.hotelCard}>
                         <div className={styles.imgbox}>
-                        <img src="https://cf.bstatic.com/xdata/images/hotel/square200/124866272.webp?k=049d28d86817ea68bb85c5c76dea796fd8bca0866fe13fc7e1c8d52769aa32a1&o=" alt="" />
+                            <img src={SingleHotel.roomimage} alt="" />
                         </div>
                         <div className={styles.hotelDetails}>
                             <div className={styles.rating}>
@@ -150,12 +176,12 @@ const HotelPaymentPage = () => {
                                 <p>+</p>
                               </div>
                             </div>
-                            <h3 className={styles.title}>Jaipur Hotel New - Heritage Hotel</h3>
-                            <p>07- Film Colony, choura rasta Jaipur, 302002 Jaipur, India</p>
-                            <p>This property is in a good location. Guests have rated it 9.0!</p>
+                            <h3 className={styles.title}>{SingleHotel.Name}</h3>
+                            <p>{SingleHotel.Loaction}</p>
+                            <p>{`This property is in a good location. Guests have rated it ${SingleHotel.reviewsratings}!`}</p>
                             <div className={styles.reviews}>
-                                <div>8.9</div>
-                                <p>Very good . <span>595 reviews</span></p>
+                                <div>{SingleHotel.reviewsratings}</div>
+                                <p>{SingleHotel.reviewsfeeds} . <span>{SingleHotel.totalreviews}</span></p>
                             </div>
                             <div className={styles.hotelLabel}>
                                 <div>
@@ -241,7 +267,7 @@ const HotelPaymentPage = () => {
                     <p style={{padding:"1rem"}}>Your booking is with Jaipur Hotel New - Heritage Hotel directly and by completing this booking you agree to the <span style={{color:"#2973a9",fontWeight:"600",textDecoration:"underline"}}>booking conditions, general terms,</span> and <span style={{color:"#2973a9",fontWeight:"600",textDecoration:"underline"}}>privacy policy</span>.</p>
                     <div className={styles.btnbox}>
                         {/* <button onClick={handlePayment}>{payment ? <Spinner color='white.500' /> : <BasicUsage/>  }</button> */}
-                        <BasicUsage username={userdata.name}/>
+                        <BasicUsage username={userdata.name} hotelData={SingleHotel}/>
                     </div>
                     <div className={styles.tool}>
                     <Tooltip hasArrow bg='black' label="Click the link to see detailed booking Conditions:including Cancellation, prepayment, Teaxes and Extra charges" aria-label='A tooltip'>What are my booking conditions?</Tooltip>

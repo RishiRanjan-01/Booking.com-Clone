@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HotelNavbar from './HotelNavbar';
 import styles from "./HotelCheckout.module.css"
 import { AiOutlineCheck } from "react-icons/ai";
@@ -10,7 +10,7 @@ import { BsTruck } from "react-icons/bs";
 import { BiRestaurant } from "react-icons/bi";
 import { MdOutlineLocalParking } from "react-icons/md";
 import { TbCreditCardOff } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { SiAirtable }  from "react-icons/si"
 import { BsChevronRight} from "react-icons/bs";
@@ -18,16 +18,37 @@ import { Tooltip } from '@chakra-ui/react';
 import { useDispatch } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import { saveFlightDate } from '../../Utils/flightOption/selecteFlight';
+import axios from "axios"
 
 const HotelCheckout = () => {
     const [email, setEmail] = useState("")
     const [fname, setFname] = useState("");
     const [lname, setlname] = useState("");
     const [cemail, setCemail] = useState("");
+    const [SingleHotel, setSingleHotel] = useState({})
 
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
+
+    const {id} = useParams()
+
+    
+    const getData = () => {
+        axios.get(` http://localhost:8080/allHotels/${id}`)
+        .then((r) => {
+            setSingleHotel(r.data)
+        })
+        .catch((er) => {
+            console.log(er)
+        })
+    }
+
+    // console.log(SingleHotel)
+
+    useEffect(() => {
+        getData();
+    },[id])
 
     const handlePageChange = () => {
         
@@ -49,9 +70,8 @@ const HotelCheckout = () => {
                 email:email
             }
             saveFlightDate("userdata",payload)
-            navigate("/Hotel-Checkout/Payment")
-        }
-        
+            navigate(`/allhotels/price/${id}/Hotel-Checkout/Payment`)
+        }    
     }
 
 
@@ -116,11 +136,11 @@ const HotelCheckout = () => {
                     <div className={styles.priceBox}>
                         <div>
                             <p>Price <br /><span>(for 2 guests)</span></p>
-                            <h3>`₹ {2166.78}`</h3>
+                            <h3>{`₹ ${SingleHotel.price}`}</h3>
                         </div>
                         <div>
                             <p>Excluded charges <br /><span>Goods & services tax</span></p>
-                            <h3>₹ 260.01</h3>
+                            <h3>{`₹ ${SingleHotel.price}`}</h3>
                         </div>
                     </div>
 
@@ -130,14 +150,14 @@ const HotelCheckout = () => {
                         <h3>Your payment schedule</h3>
                         <div>
                         <p>Before you stay you'll pay</p>
-                        <p>₹ 2,166.78</p>
+                        <p>{`₹ ${SingleHotel.price}`}</p>
                         </div>
                     </div>
                     <div className={styles.priceBox2}>
                         <h3>How much will it cost to cancel?</h3>
                         <div>
                         <p>If you cancel, you'll pay</p>
-                        <p>₹ 2,166.78</p>
+                        <p>{`₹ ${SingleHotel.price}`}</p>
                         </div>
                     </div>
 
@@ -164,7 +184,7 @@ const HotelCheckout = () => {
                 <div>
                     <div className={styles.hotelCard}>
                         <div className={styles.imgbox}>
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/square200/124866272.webp?k=049d28d86817ea68bb85c5c76dea796fd8bca0866fe13fc7e1c8d52769aa32a1&o=" alt="" />
+                            <img src={SingleHotel.roomimage} alt="" />
                         </div>
                         <div className={styles.hotelDetails}>
                             <div className={styles.rating}>
@@ -180,12 +200,12 @@ const HotelCheckout = () => {
                                 <p>+</p>
                               </div>
                             </div>
-                            <h3 className={styles.title}>Jaipur Hotel New - Heritage Hotel</h3>
-                            <p>07- Film Colony, choura rasta Jaipur, 302002 Jaipur, India</p>
-                            <p>This property is in a good location. Guests have rated it 9.0!</p>
+                            <h3 className={styles.title}>{SingleHotel.Name}</h3>
+                            <p>{SingleHotel.Loaction}</p>
+                            <p>{`This property is in a good location. Guests have rated it ${SingleHotel.reviewsratings}!`}</p>
                             <div className={styles.reviews}>
-                                <div>8.9</div>
-                                <p>Very good . <span>595 reviews</span></p>
+                                <div>{SingleHotel.reviewsratings}</div>
+                                <p>{SingleHotel.reviewsfeeds} . <span>{SingleHotel.totalreviews}</span></p>
                             </div>
                             <div className={styles.hotelLabel}>
                                 <div>

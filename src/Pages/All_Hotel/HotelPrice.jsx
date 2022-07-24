@@ -22,6 +22,8 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import HotelSearchBox from "./HotelSearchBox";
+import HomePageFotter from "../../Components/HomePageFotter";
+import Navbar from "../../Components/Navbar";
 
 const HotelPrice = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -85,6 +87,8 @@ const HotelPrice = () => {
   }, [location.search]);
 
   return (
+    <>
+    <Navbar/>
     <div className={styles.All_Hotels_Main}>
       <div className={styles.All_Hotels_All_Container}>
         <div className={styles.All_Hotels_Breadcrums}>
@@ -263,6 +267,8 @@ const HotelPrice = () => {
         </div>
       </div>
     </div>
+    <HomePageFotter/>
+    </>
   );
 };
 

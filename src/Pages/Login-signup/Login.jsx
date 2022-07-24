@@ -17,8 +17,8 @@ import {
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
-import Navbar from "../Components/Navbar";
-import { setEmailData } from "../Redux/AuthReducer/action";
+import Navbar from "../Login-signup/signin-Login/SignupNavbar";
+import { setEmailData } from "../../Redux/Authentication/action";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -32,6 +32,7 @@ export default function Login() {
 
   return (
     <>
+    <Navbar/>
       <Flex minH={"40vh"} align={"center"} justify={"center"} bg="white" color="black">
         <Stack spacing={1} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>

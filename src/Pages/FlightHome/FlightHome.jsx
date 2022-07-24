@@ -15,9 +15,9 @@ const FlightHome = () => {
     <div>
       <Navbar/>
         <FlightHomeTop/>
-         <Popularflight/>
+         {/* <Popularflight/> */}
 
-         <TrendingCities/>
+         {/* <TrendingCities/> */}
          <Transparency/>
          <Flywordwide/>
          <Frequestlyquestion/>
