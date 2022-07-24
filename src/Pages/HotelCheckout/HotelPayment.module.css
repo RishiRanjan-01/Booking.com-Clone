@@ -1,0 +1,578 @@
+
+.mainBody{
+    width: 72%;
+    height: max-content;
+    margin: auto;
+    margin-top: 2rem;
+}
+.UpdateInfo{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.UpdateInfo div{
+    height: 100%;
+    width: 13%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.UpdateInfo div div{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #4798d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+}
+.UpdateInfo div h3{
+    font-weight: 500;
+    color: gray;
+}
+.UpdateInfo div:nth-child(3) h3{
+    font-weight: 500;
+    color: rgb(105, 102, 102);
+
+}
+.UpdateInfo div:nth-child(5) div{
+    background-color: #4798d3;
+
+}
+.UpdateInfo div:nth-child(5) h3{
+    color: rgb(105, 102, 102);
+    font-weight: 600;
+}
+
+/*  Two Conataint box */
+.twoContainerBox{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.twoContainerBox > div:nth-child(1){
+    width: 32%;
+    /* border: 1px solid grey; */
+    /* display: grid; */
+    /* gap: 14px; */
+
+}
+.twoContainerBox > div:nth-child(2){
+    width: 66%;
+    /* border: 1px solid grey; */
+}
+
+
+/* Booking details */
+
+.bookingDetails{
+    height: 370px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 1.2rem;
+
+}
+
+.bookingDetails h2{
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+}
+.bookingDetails > div{
+    height: 100px;
+    width: 90%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.check_in > p{
+    font-weight: 500;
+    color: black;
+}
+.check_in div{
+    margin-top: 0.5rem;
+}
+.check_in2 > p{
+    font-weight: 500;
+    color: black;
+}
+.check_in2 div{
+    margin-top: 0.5rem;
+}
+.check_in > div{
+    padding-right: 0.6rem;
+    border-right: 1px solid gray;
+}
+
+.check_in div h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+.bookingDetails .totallen{
+    height: 75px;
+    color: black;
+    border-bottom: 1px solid grey;
+    margin-top: 0.5rem;
+}
+.totallen span{
+    font-weight: 500;
+}
+
+.bookingDetails > div:nth-child(4){
+    display: grid;
+    height: 80px;
+}
+.btnBox p{
+    color: black;
+    font-weight: 500;
+}
+.btnBox p span {
+    font-weight: 100;
+}
+.btnBox button{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2973a9;
+
+}
+.btnBox button:hover{
+    background-color: #a7c4d8;
+}
+
+
+/*  Price Box */
+.priceBox{
+    height: 150px;
+    width: 100%;
+    border: 1px solid grey;  
+    margin-top: 1.2rem;
+}
+.priceBox div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebf3ff;
+    padding: 1rem;
+}
+.priceBox div:nth-child(1) p{
+    color: black;
+    font-weight: 500;
+}
+.priceBox div:nth-child(1) p span{
+    font-weight: 100;
+    font-size: 13px;
+}
+.priceBox div:nth-child(1) h3{
+    color: black;
+    font-weight: 500;
+}
+.priceBox div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.priceBox div:nth-child(2) p{
+    color: black;
+    font-weight: 500;
+}
+.priceBox div:nth-child(2) p span{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+/*  priceBox2 */
+
+.priceBox2{
+    height: 90px;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 1rem;
+    margin-top: 1.2rem;
+}
+.priceBox2 h3{
+    color: black;
+    font-weight: 500;
+}
+.priceBox2 div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+
+.yourRewards{
+    height: 120px;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 1rem;
+    margin-top: 1.2rem;
+}
+.yourRewards h3{
+    color: black;
+    font-weight: 500;
+}
+.yourRewards div{
+    width: 60%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.yourRewards div p{
+    font-weight: 500;
+    color: green;
+}
+.yourRewards div p span{
+    font-weight: 400;
+    color: black;
+}
+.yourRewards button {
+    color: #2973a9;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    margin-top: 0.5rem;
+}
+.yourRewards button:hover{
+    background-color: #a7c4d8;
+}
+
+/*  limited Offer */
+
+.limitedOffer{
+    height: 140px;
+    border: 1px solid crimson;
+    background-color: #fff0f0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+.limitedOffer div{
+    width: 80%;
+}
+.limitedOffer div h3{
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+}
+.limitedOffer div p{
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+
+
+/*  Hotel card  */
+
+.hotelCard{
+    height: 220px;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.imgbox{
+    height: 100%;
+    width: 180px;
+}
+.imgbox img{
+    height: 100%;
+    width: 100%;
+}
+
+.hotelDetails{
+    height: 100%;
+    width: 70%;
+}
+
+.rating{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.rating h3{
+    font-weight: 600;
+    color: grey;
+}
+.rating div{
+    display: flex;
+    align-items: center;
+
+}
+.rating div:nth-child(3){
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: yellow;
+    color: #fff
+}
+.rating div:nth-child(3) p{
+    font-size: large;
+    font-weight: 700;
+}
+.title{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.hotelDetails > p:nth-child(3){
+    font-size: 14px;
+    margin-top: 1rem;
+}
+.hotelDetails > p:nth-child(4){
+    font-size: 14px;
+    color: green;
+}
+.reviews{
+    display: flex;
+    margin-top: 0.8rem;
+    gap: 10px;
+    align-items: center;
+}
+.reviews div{
+    background-color: blue;
+    color: #fff;
+    padding: 0.2rem;
+    font-size: 13px;
+}
+.reviews p{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(62, 61, 61);
+}
+.reviews p span{
+    font-weight: 400;
+    color: grey;
+}
+.hotelLabel{
+    width: 100%;
+    height: 10%;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.hotelLabel div{
+    display: flex;
+    align-items: center;
+    width: 19%;
+    border: 1px solid grey;
+    justify-content: space-between;
+    padding: 0.1rem;
+}
+.hotelLabel div p{
+    font-size: 10px;
+}
+
+/*  Address Details */
+
+.address{
+    height: 400px;
+    width: 100%;
+    background-color: #ebf3ff;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.address h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.address > div:nth-child(2){
+    width: 41%;
+    padding: 0.5rem;
+    background-color: #d2edd5;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.address div:nth-child(2) p{
+    font-size: 14px;
+    color: green;
+}
+
+.Userdetails{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+.Userdetails div:nth-child(1){
+    width: 70%;
+
+}
+.Userdetails div:nth-child(1) h3{
+    font-weight: 600;
+}
+.Userdetails div:nth-child(1) select{
+    width: 80%;
+    height: 35px;
+    /* padding: 0.5rem; */
+    border: 1px solid grey;
+    border-radius:5px;
+    margin-top:0.5rem
+}
+.Userdetails div:nth-child(1) select:focus{
+    border: 3px solid #2973a9;
+    border-radius: 5px;
+}
+.Userdetails div:nth-child(3){
+    margin-top: 1rem;
+}
+.Userdetails div:nth-child(3) p{
+    font-weight: 600;
+    color: black;
+}
+.telephone{
+    width: 70%;
+    height: 40px;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+}
+.telephone input{
+    height: 100%;
+    width: 90%;
+    padding: 0.5rem;
+}
+.telephone input:focus{
+    outline: #2973a9;
+    outline: #2973a9;
+}
+.InputCheckbox{
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    align-items: center;
+}
+.InputCheckbox input{
+    height: 20px;
+    width: 20px;
+}
+.InputCheckbox p{
+    font-size: 14px;
+    color: black;
+}
+.paratext{
+    font-size: 13px;
+    font-weight: 400;
+    color: grey;
+    margin-left: 1.8rem;
+}
+.userInfo{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userInfo div{
+    height: 150px;
+    width: 100%;
+    padding: 0.2rem;
+    border: 1px solid grey;
+}
+.userInfo div p:nth-child(1){
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #4798d3;
+    cursor: pointer;
+}
+.userInfo div p:nth-child(2){
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+}
+.userInfo div p:nth-child(4){
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+}
+
+/* input check box 2 */
+.inputCheckbox2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+.inputCheckbox2 input{
+    height: 20px;
+    width: 20px;
+}
+
+.btnbox{
+    height: 50px;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+}
+.btnbox button{
+    height: 100%;
+    width: 200px;
+    background-color: #2973a9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+}
+.btnbox button:hover{
+    background-color: #194c70;
+}
+.tool{
+    margin-top: 1rem;
+    color: #0071c2;
+    float: right;
+}
+
+/*  Footer section */
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #c6d1d9;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+.footer div:nth-child(1){
+    height: 30%;
+    width: 72%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+.footer div:nth-child(1) p{
+    font-size: 14px;
+    font-weight: 600;
+    color:#0877c8;
+    border-left: 1px solid grey;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.footer div:nth-child(1) p:nth-child(1){
+    border-left: none;
+}
+.copyright{
+    width: 72%;
+    font-size: 12px;
+    color: black;
+    margin: auto;
+    margin-top: 1rem;
+}
