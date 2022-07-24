@@ -35,7 +35,7 @@ const HotelCheckout = () => {
 
     
     const getData = () => {
-        axios.get(`https://bookingcoclone.herokuapp.com/${id}`)
+        axios.get(`http://localhost:8080/allHotels/${id}`)
         .then((r) => {
             setSingleHotel(r.data)
         })
@@ -44,7 +44,7 @@ const HotelCheckout = () => {
         })
     }
 
-    // console.log(SingleHotel)
+    console.log(SingleHotel)
 
     useEffect(() => {
         getData();

@@ -4,6 +4,8 @@ import { QuestionOutlineIcon } from "@chakra-ui/icons";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { FaUserCircle } from "react-icons/fa";
 
 const RoutingItems = [
   {
@@ -23,7 +25,7 @@ const RoutingItems = [
       </svg>
     ),
     text: "Flight+Hotel",
-    url: "",
+    url: "/Flights",
   },
   {
     logo: <ion-icon name="airplane-outline"></ion-icon>,
@@ -51,32 +53,35 @@ const RoutingItems = [
       </svg>
     ),
     text: "Airport Taxis",
-    url: "",
+    url: "/Airport/Taxis",
   },
 ];
 
-const linkArr = ["/","/Flights","","","",""]
+
 
 const Navbar = () => {
   const [index, setIndex] = useState(0);
 
+  const isAuth = useSelector(state => state.auth.isAuth)
+
   // let boxRef = useRef();
   const navigate = useNavigate()
+  console.log(index)
 
-  const handleNavigate = (ind) => {
-    for(let i=0; i<linkArr.length; i++){
-      if(ind === i){
-        navigate(linkArr[i])
-      }
-    }
+  // const handleNavigate = (ind) => {
+  //   for(let i=0; i<linkArr.length; i++){
+  //     if(ind === i){
+  //       navigate(linkArr[i])
+  //     }
+  //   }
 
-  }
+  // }
  
-  const handleClick = (e, index) => {
+  // const handleClick = (e, index) => {
     // console.log(e,index)
     // boxRef.current = index
     // console.log(boxRef.current, index)
-  };
+  // };
 
   return (
     <div className={styles.top_head}>
@@ -124,8 +129,20 @@ const Navbar = () => {
             </div>
             <div className={styles.btnbox}>
               <button>List Your Property</button>
-              <button onClick={() => navigate("/signup")}>Register</button>
-              <button onClick={() => navigate("/register")}>Sign in</button>
+              {
+                isAuth ? <div className={styles.afterSignin}>
+                  <FaUserCircle color="grey" size={"25px"}/>
+                  <div>
+                    <p>Your Account</p>
+                    <p>Genius Level 1</p>
+                  </div>
+                </div> : 
+                <> 
+                <button onClick={() => navigate("/register")}>Register</button>
+                <button onClick={() => navigate("/login")}>Sign in</button>
+                </>
+              }
+             
             </div>
           </div>
         </div>
@@ -137,13 +154,13 @@ const Navbar = () => {
             return ( 
                 <div
                 key={item.text}
-                onClick={(e) => {
-                  setIndex(ind);
-                  handleNavigate(ind)
-                }}
                 style={{
                   border: index == ind ? "1px solid #fff" : null,
                   backgroundColor: index == ind ? "#4670ab" : null,
+                }}
+                onClick={() => {
+                  setIndex(ind);
+                  navigate(item.url)
                 }}
               >
                 <span>{item.logo}</span>

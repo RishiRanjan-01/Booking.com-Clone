@@ -15,7 +15,7 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
 import { useState } from "react";
-  import { Link as RouterLink } from "react-router-dom";
+  import { Link as RouterLink, useNavigate } from "react-router-dom";
   import Navbar from "../Login-signup/signin-Login/SignupNavbar";
   import {useDispatch} from "react-redux"
 import { setloginEmailData } from "../../Redux/Authentication/action";
@@ -23,10 +23,13 @@ import { setloginEmailData } from "../../Redux/Authentication/action";
   export default function Register() {
     const [email, setEmail] = useState("");
 
+    const navigate = useNavigate();
+
     const dispatch = useDispatch();
 
     const handleClick = () => {
-      dispatch(setloginEmailData(email))
+      dispatch(setloginEmailData(email));
+      navigate("/login/password")
     }
 
     return (
@@ -52,12 +55,12 @@ import { setloginEmailData } from "../../Redux/Authentication/action";
                 </FormControl>
   
                 <Stack>
-                  <RouterLink to="/registersecond" color={"blue.400"}>
+                  
                     <Button
                      bg={"rgb(105, 138, 242 )"}
                      onClick={handleClick}
                      h={"50px"}
-                     w={"300px"}
+                     w={"100%"}
                      color={"white"}
                      _hover={{
                        bg: "blue.700",
@@ -65,7 +68,7 @@ import { setloginEmailData } from "../../Redux/Authentication/action";
                     >
                       Continue with email
                     </Button>
-                  </RouterLink>
+                 
                 </Stack>
                 <Stack pt={2}>
                   <Text align={"center"}>or use omne of these option</Text>

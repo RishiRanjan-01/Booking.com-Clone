@@ -4,14 +4,15 @@ import {Link} from "react-router-dom"
 import { Icon } from '@chakra-ui/react'
 import { QuestionIcon, QuestionOutlineIcon } from '@chakra-ui/icons'
 // import {QuestionOutlineIcon} from 'react-icons'
+import styles from "./SignupNavbar.module.css";
 
 
 const Navbar = () => {
-   console.log('Navbar')
+   
   return(
     <>
-    <div className='nav'>
-    <div className='first'>
+    <div className={styles.nav}>
+    <div className={styles.first}>
     {/* <Link to="/"><h1>Booking.com</h1></Link> */}
     <svg
               class="bk-icon -streamline-booking_logo_dark_bg_mono"
@@ -30,11 +31,11 @@ const Navbar = () => {
 
  </div>
     
-    <div className='second'>
+    <div className={styles.second}>
     <img src="https://q-xx.bstatic.com/backend_static/common/flags/new/48-squared/in.png"/>
  </div>
     
-    <div className='third'>
+    <div className={styles.third}>
     <QuestionOutlineIcon fontSize={"25px"} marginTop={"19px"}  marginLeft={"28px"}/>
 
  </div>

@@ -16,17 +16,43 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Navbar from "../Login-signup/signin-Login/SignupNavbar";
 import { setEmailData } from "../../Redux/Authentication/action";
 
 export default function Login() {
   const [email, setEmail] = useState("");
+  const [err,setErr] = useState("");
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
 
   const handleClick = () => {
-    dispatch(setEmailData(email))
+
+    if(email === ""){
+      setErr("Email Can't be Empty")
+    }
+    else if(email.length <= 12){
+      setErr("Please Enter Valid Email");
+    }
+    else{
+      // let flag = false
+      // for(let i=0; i<email.length;i++){
+      //   if(email[i] == "@"){
+      //     console.log("email")
+      //     flag = true;
+      //   }
+      // }
+      if(!email.includes("@")){
+        setErr("Email Must have @ Symbol")
+      }
+      else{
+        dispatch(setEmailData(email))
+        navigate("/signup")
+      }
+    }
   }
  
 
@@ -49,15 +75,15 @@ export default function Login() {
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
                 <Input type="email" border={"2px solid black"} value={email} onChange={(e) => setEmail(e.target.value) } />
+                <Text color="red">{err}</Text>
               </FormControl>
 
-              <Stack>
-                <RouterLink to="/signup" color={"blue.400"}>
+              <Stack>               
                   <Button
                   onClick={handleClick}
                    bg={"rgb(105, 138, 242 )"}
                    h={"50px"}
-                    w={"300px"}
+                    w={"100%"}
                     color={"white"}
                     _hover={{
                       bg: "blue.700",
@@ -65,7 +91,7 @@ export default function Login() {
                   >
                     Continue with email
                   </Button>
-                </RouterLink>
+
                 <Image w="380px" h="45px" m="auto" src='https://i.ibb.co/svtT0RH/image-10.png' alt='Dan Abramov' />
               </Stack>
               <HStack spacing="30px" justifyContent={"center"}>

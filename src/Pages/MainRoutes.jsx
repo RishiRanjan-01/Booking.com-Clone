@@ -15,7 +15,7 @@ import Signup from './Login-signup/Signup'
 import Login from './Login-signup/Login'
 import Register from './Login-signup/Register'
 import Registersecond from './Login-signup/Registersecond'
-// import Taxi from './Login-signup/Taxi'
+import Taxi from './Login-signup/Taxi'
 
 const MainRoutes = () => {
   return (
@@ -37,10 +37,11 @@ const MainRoutes = () => {
         <Route path="*" element={<div>Page Not Found</div>} />
 
 
-       <Route path='/login' element={<Login/>} />
+       <Route path='/register' element={<Login/>} />
        <Route path='/signup' element={<Signup/>}/>
-      <Route path='/register' element={<Register/>}/>
-      <Route path='/registersecond' element={<Registersecond/>}/>
+      <Route path='/login' element={<Register/>}/>
+      <Route path='/Login/password' element={<Registersecond/>}/>
+      <Route path="/Airport/Taxis" element={<Taxi/>}/>
       </Routes>
     </>
   )

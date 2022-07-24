@@ -22,6 +22,9 @@ import {
   import { loginApi, register } from '../../Redux/Authentication/action';
   import {useDispatch,useSelector} from 'react-redux';
 import Navbar from '../Login-signup/signin-Login/SignupNavbar';
+
+
+
   function reducer(state,action){
     switch(action.type){
   
@@ -57,7 +60,8 @@ import Navbar from '../Login-signup/signin-Login/SignupNavbar';
       }
       dispatch(loginApi(payload))
       .then((r) => {
-        console.log(r)
+        alert("Login Successful!")
+        Navigate("/")
       })
     };
     
@@ -105,7 +109,7 @@ import Navbar from '../Login-signup/signin-Login/SignupNavbar';
                   loadingText="Submitting"
                   bg={"rgb(105, 138, 242 )"}
                   h={"50px"}
-                  w={"310px"}
+                  w={"100%"}
                   color={"white"}
                   _hover={{
                     bg: "blue.700",
@@ -125,11 +129,11 @@ import Navbar from '../Login-signup/signin-Login/SignupNavbar';
               <Stack pt={2}>
                   <Button
                   h={"50px"}
-                  w={"310px"}
+                  w={"100%"}
                   color={"blue"}
                   border={"solid 1px blue"}
                  >
-                 sign in with a verification link
+                 Sign in with a verification link
                  </Button>
               </Stack>
               <Stack pt={2}>

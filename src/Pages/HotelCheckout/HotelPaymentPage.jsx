@@ -29,11 +29,11 @@ const HotelPaymentPage = () => {
 
     const navigate = useNavigate();
 
-    const {id} = useParams()
+    const {id} = useParams();
 
     
     const getData = () => {
-        axios.get(`https://bookingcoclone.herokuapp.com/${id}`)
+        axios.get(`http://localhost:8080/allHotels/${id}`)
         .then((r) => {
             setSingleHotel(r.data)
         })
