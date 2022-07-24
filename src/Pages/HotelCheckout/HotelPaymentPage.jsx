@@ -33,7 +33,7 @@ const HotelPaymentPage = () => {
 
     
     const getData = () => {
-        axios.get(` http://localhost:8080/allHotels/${id}`)
+        axios.get(`https://bookingcoclone.herokuapp.com/${id}`)
         .then((r) => {
             setSingleHotel(r.data)
         })
