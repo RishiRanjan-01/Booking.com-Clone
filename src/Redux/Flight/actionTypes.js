@@ -11,3 +11,6 @@ export const GET_TIME_SORT = "GET_TIME_SORT";
 export const GET_FLIGHT_DATA = "GET_FLIGHT_DATA";
 
 export const GET_BEST_SORT = "GET_BEST_SORT";
+
+
+export const FLIGHT_CONTACT_DATA = "FLIGHT_CONTACT_DATA"

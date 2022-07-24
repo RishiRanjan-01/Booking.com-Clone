@@ -1,11 +1,355 @@
 .HotelSeeAvialability_Main{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .HotelSeeAvialability_Conatiner{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 80%;
     margin: 0 auto;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+.HotelSeeAvialability_SearchBox_ImageGrid_Conatiner{
+    /* border: 1px solid rgb(10, 7, 7); */
+    width: 100%;
+    display: flex;
+}
+.HotelSeeAvialability_SearchBox_Conatiner{
+    /* border: 1px solid red; */
+    width: 25%;
+}
+.HotelSeeAvialability_ImageGrid_Conatiner{
+    /* border: 1px solid red; */
+    width: 75%;
+}
+.HotelSeeAvialability_ImageGrid_Deatils{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.HotelSeeAvialability_ImageGrid_Image{
+    /* border: 1px solid red; */
+    margin: 5px;
+}
+.HotelSeeAvialability_Description_Property_Highlights_Main{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    /* padding: 10px; */
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Property_Highlights_content{
+    /* border: 1px solid red; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 8px;
+    background-color:#EBF3FF ;
+}
+.HotelSeeAvialability_Property_Highlights_content div{
+    /* border: 1px solid red; */
+    margin: 5px;  
+    
+}
+.HotelSeeAvialability_Description{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    gap: 10px;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Property_Highlights{
+    width: 30%;
+    
+    color: #262626;
+ font-size: 14px;
+ line-height: 20px;
+ text-align: start;
+ letter-spacing: normal;
+ font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Main{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Change_Search{
+    width: 70%;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Form{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar{
+    width: 100%;
+    display: flex;
+    background-color: #0562e4dc;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.925);
+    padding: 10px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Form_Data_Container{
+    width: 80%;
+    
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_Availability_Form_Will_Reserve{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap:10px; 
+    /* border: 1px solid red;  */
+    padding: 5px;
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Top{
+    display: flex;
+    margin: 5px 5px 0 5px;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Bottom{
+    margin: 0 5px 0 5px;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Middle{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px 0 5px;
+    /* border: 1px solid red; */
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Top_right{
+    width: 30%;
+    font-size: 25px;
+    color:rgb(0, 89, 255)
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Top_right div{
+    display: flex;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_ImageGrid_Deatils_Top_left{
+    width: 70%;
+}
+.HotelSeeAvialability_Description div{
+ color: #262626;
+ font-size: 14px;
+ line-height: 20px;
+ text-align: start;
+ letter-spacing: normal;
+ font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.HotelSeeAvialability_Property_Highlights_location{
+    display: flex;
+}
+.HotelSeeAvialability_Description_Most_popular_category{
+    display: flex;
+    flex-direction: column;
+}
+.HotelSeeAvialability_Description_Most_popular_category_content_top{
+    display: flex;
+    margin-top: 5px;
+    
+    padding: 5px;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_Description_Most_popular_category_content_top_content{
+display: flex;
+}
+.HotelSeeAvialability_Description_Most_popular_category_content_top_content div{
+    color: green;
+}
+.HotelSeeAvialability_Property_Highlights_Room_with_content{
+    display: flex;
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content_roomtype{
+    width:30% ;
+    /* border: 1px solid white; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content_sleep{
+    width: 10%;
+    /* border: 1px solid white; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content_Today_price{
+    width: 20%;
+    /* border: 1px solid white; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content_Your_Choice{
+    width: 25%;
+    /* border: 1px solid white; */
+}
+.HotelSeeAvialability_Availability_Form_Top_Navbar_content_Your_Select_rooms{
+    width: 10%;
+    /* border: 1px solid white; */
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_roomtype{
+    /* border: 1px solid rgb(9, 52, 245); */
+    display: flex;
+    flex-direction: column;
+    width:30% ;
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_roomtype_Top{
+    /* border: 1px solid rgb(9, 52, 245); */
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+   
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room{
+    /* border: 2px solid rgb(225, 9, 245); */
+    display: flex;
+    padding: 8px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_roomtype_Top_data{
+display: flex;
+justify-content: space-around;
+}
+.HotelSeeAvialability_Right_tick{
+    color: rgb(4, 172, 4);
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_sleeps_select_rooms{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-between;
+    /* border: 1px solid rgb(0, 115, 223); */
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_sleeps_select_rooms_Top{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+    /* border: 1px solid rgb(1, 96, 238); */
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_sleeps_select_rooms_Top div{
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_sleeps_select_rooms_bottom{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+    /* border: 1px solid rgb(1, 96, 238); */
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_double_room_sleeps_select_rooms_bottom div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Superior_double_room{
+    display: flex;
+    padding: 8px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_Family_room{
+    display: flex;
+    padding: 8px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Delux_Triple_room{
+    display: flex;
+    padding: 8px;
+}
+.HotelSeeAvialability_Availability_Form_Data_Family_Suite_room{
+    display: flex;
+    padding: 8px;
+}
+.HotelSeeAvialability_Availability_Form_Data_person_icons{
+   font-size: 20px;
+    
+    
+}
+.HotelSeeAvialability_Availability_Form_Data_Container_reserve{
+    display: flex;
+    /* border: 1px solid rgb(14, 13, 13); */
+}
+.HotelSeeAvialability_Availability_Form_below_banner{
+    border: 1px solid rgb(255, 255, 255);
+}
+.HotelSeeAvialability_Availability_Banner_Below_FourReasons_Choose{
+    border: 1px solid rgb(255, 255, 255);
+}
+.HotelSeeAvialability_Availability_Guest_Reviews_Main{
+    border: 1px solid rgb(255, 255, 255);
+}
+.HotelSeeAvialability_Availability_Facilities_At_Hotels{
+    border: 1px solid rgb(255, 255, 255);
+}
+.HotelSeeAvialability_Availability_House_Rules{
+    border: 1px solid rgb(255, 254, 254);
+}
+.HotelSeeAvialability_Availability_The_Fine_Print{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_Availability_House_Rules_top{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_Availability_Facilities_At_Hotels_Top{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_Availability_FAQs{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+}
+.HotelSeeAvialability_Availability_FAQs_left{
+    width: 30%;
+    background-color:#EBF3FF ;
+    /* border: 1px solid rgb(14, 13, 13); */
+}
+.HotelSeeAvialability_Availability_FAQs_right{
+    width: 70%;
+    /* border: 1px solid rgb(14, 13, 13); */
+}
+.HotelSeeAvialability_Availability_Guest_Reviews_Top{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+    justify-content: space-between;
+}
+.HotelSeeAvialability_Availability_Guest_Reviews_Middle{
+    /* border: 1px solid rgb(14, 13, 13); */
+    display: flex;
+    width: 25%;
+    margin-left: 5px;
+    justify-content: space-between;
+}
+.All_image_screenshot{
+    width: 100%;
+    /* border: 1px solid rgb(14, 13, 13); */
+}
+.All_Coontent_below_form_data{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 15px;
+    padding: 5px;
+}
+
