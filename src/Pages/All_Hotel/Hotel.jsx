@@ -121,10 +121,10 @@ const Hotel = () => {
             </BreadcrumbItem>
 
             <BreadcrumbItem color="blue">
-              <BreadcrumbLink href="#">Maharastra</BreadcrumbLink>
+              <BreadcrumbLink href="#">Delhi</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem color="blue">
-              <BreadcrumbLink href="#">Mumbai</BreadcrumbLink>
+              <BreadcrumbLink href="#">New Delhi</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage color="grey">
               <BreadcrumbLink href="#">Search results</BreadcrumbLink>
