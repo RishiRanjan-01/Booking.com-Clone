@@ -8,6 +8,8 @@ import { BoxFlight } from './BoxFlight'
 import Navbar from '../../Components/Navbar'
 import { FlightFooter } from '../../Components/FlightFooter/FlightFooter'
 import FlightSearch from '../FlightHome/FlightSearch'
+import { useDispatch } from 'react-redux'
+import { getAscSort, getBestSort, getTimeSort } from '../../Redux/Flight/action'
 
 
 function FligthOption() {
@@ -19,11 +21,25 @@ function FligthOption() {
     //     dispatch(getFligths());
 
     // }, []);
+    const dispatch = useDispatch();
+
 
     const flight = useSelector(state => state.flightReducer.flight);
     // console.log(flight);
 
+    // if (value === 'any') {
+    //     console.log(value)
+    //     dispatch(getBestSort())
 
+    // }
+    // else if (value === 'direct') {
+    //     dispatch(getAscSort())
+
+    // }
+    // else if (value === 'stop') {
+    //     dispatch(getTimeSort())
+
+    // }
 
 
     return (

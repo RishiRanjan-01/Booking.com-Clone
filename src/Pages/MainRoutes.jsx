@@ -30,10 +30,11 @@ const MainRoutes = () => {
         <Route path="/Flights" element={<FlightHome/>}></Route>
         <Route path={"/Sign-up"} element={<Signup/>}/>
 
+        <Route path='/flighthome' element={<FlightHome />} />
         <Route path='/flightoption' element={<FligthOption />} />
         <Route path='/flightcontact' element={<ContactFlight />} />
         <Route path='/flightcontact/flightpayment' element={<PaymentFlight />} />
-        <Route path='/flightcontact/flightpayment/PaymentSuccess' element={<PaymentSuccess />} />
+        <Route path='/PaymentSuccess' element={<PaymentSuccess />} />
         <Route path="*" element={<div>Page Not Found</div>} />
 
 
