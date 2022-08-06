@@ -17,7 +17,7 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 **Original website link**: https://www.naukri.com/
 
-**Link of our deployed project**: https://naukriclone98.vercel.app/
+**Link of our deployed project**: https://cluttered-stranger-7385.vercel.app/
 
 ## Tech Stack and features
 - React
