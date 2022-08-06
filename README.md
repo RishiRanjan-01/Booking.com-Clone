@@ -32,37 +32,37 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 ## Glimpse and screenshots of our cloned website:
 **Landing Page**
-https://github.com/RishiRanjan-01/cluttered-stranger-7385/issues/76#issue-1330853199
+![landingPage](https://user-images.githubusercontent.com/97913174/183266809-e3d25a8a-85f5-4b2d-b214-55bc2b16d99f.png)
 
-**Registration Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/RegisterPage.png)
+**Hotel Page**
+![Hotel Page](https://user-images.githubusercontent.com/97913174/183266812-1cf3de21-750e-441a-95d2-75231adb2a0e.png)
 
-**Login Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/LoginPage.png)
+**Hootel See Avilablity Page**
+![see availability page](https://user-images.git
 
-**Home Page after Login**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/HomePage.png)
+**Hotel Checkout page**
+![hotel checkout page](https://user-images.githubusercontent.com/97913174/183266821-f778b579-7b68-4c9a-be93-9396fbf1457a.png)
 
-**Job Recommendation Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/JobRecommendation.png)
+**Hotel payment Page**
+![hotel payment page](https://user-images.githubusercontent.com/97913174/183266826-815f0b67-3c50-48ce-9235-36cfe9e572d3.png)
+png)
 
-**Succesful Job Applied Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/AppliedSuccessfulJob.png)
+**Flight Page**
+![Flight page](https://user-images.githubusercontent.com/97913174/183266828-25e16b14-264e-493a-8913-36b448119737.png)
 
-**Recruiters Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/RecruitersPage.png)
+**Flight Option Page**
+![Flight option page](https://user-images.githubusercontent.com/97913174/183266831-3c0bbd87-533b-41f0-8c38-7e7a0f67f555.png)
 
-**Subscription Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/SubscriptionPage.png)
+**Flight Details Page**
+![Flight details page](https://user-images.githubusercontent.com/97913174/183266833-d5b7d661-6fb6-4e2f-9b23-d855861ebc58.png)
 
-**Payment Method Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/PaymentMethodPage.png)
+**Flight Contact details Page**
+![Flight Contact details](https://user-images.githubusercontent.com/97913174/183266836-332fadaf-ef8e-4745-b2e3-b428ab6c8d42.png)
 
 **Payment authentication Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/AuthenticationPage.png)
+![flight paymetn page](https://user-images.githubusercontent.com/97913174/183266838-8a554545-b820-4c43-9307-d2c2e9fbd7e4.png)
 
-**Payment Successful Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/PaymentSuccessfulPage.png)
+
 
 
 ## Team Members Contributions:
