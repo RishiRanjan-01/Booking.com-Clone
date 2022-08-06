@@ -1,4 +1,4 @@
-# Naukri.com - Clone
+# Booking.com - Clone
 
 <img src="https://lh3.googleusercontent.com/zyVawGkrNqTVDv1h2qrPcFty0ARE-tkuVadf3wo7m0LwLJuHWbHxQZsboLRX9q6rLkmHzA=s170">
 
