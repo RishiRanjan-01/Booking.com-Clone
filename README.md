@@ -15,7 +15,7 @@ Founded in 1996 in Amsterdam, Booking.com has grown from a small Dutch startup t
 
 The project has been completed within the duration of 5 days. Each of us had shared work and responsibilities and learnt a lot during the course of this project.
 
-**Original website link**: https://www.naukri.com/
+**Original website link**: https://www.booking.com/
 
 **Link of our deployed project**: https://cluttered-stranger-7385.vercel.app/
 
