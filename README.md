@@ -32,7 +32,7 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 ## Glimpse and screenshots of our cloned website:
 **Landing Page**
-![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/LandingPage.png)
+https://github.com/RishiRanjan-01/cluttered-stranger-7385/issues/76#issue-1330853199
 
 **Registration Page**
 ![App Screenshot](https://github.com/KaustubhBadve/Naukri/blob/main/Screenshots/RegisterPage.png)
