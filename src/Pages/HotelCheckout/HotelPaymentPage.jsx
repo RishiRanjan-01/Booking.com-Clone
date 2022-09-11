@@ -30,10 +30,10 @@ const HotelPaymentPage = () => {
     const navigate = useNavigate();
 
     const {id} = useParams();
-
+    console.log(id);
     
     const getData = () => {
-        axios.get(`http://localhost:8080/allHotels/${id}`)
+        axios.get(`https://bookingcoclone.herokuapp.com/allHotels/${id}`)
         .then((r) => {
             setSingleHotel(r.data)
         })
@@ -42,7 +42,7 @@ const HotelPaymentPage = () => {
         })
     }
 
-    // console.log(SingleHotel)
+    console.log(SingleHotel)
 
     useEffect(() => {
         getData();
