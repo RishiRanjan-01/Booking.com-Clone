@@ -4,7 +4,7 @@ import * as types from "./actionTypes";
 const getALLHOTELS = (params) => (dispatch) => {
   dispatch({ type: types.GET_ALLHOTELS_REQUEST });
   axios
-    .get("https://bookingcoclone.herokuapp.com/allHotels", params)
+    .get("https://foremost-bronzed-galley.glitch.me/allHotels", params)
     .then((res) =>
       dispatch({
         type: types.GET_ALLHOTELS_SUCCESS,

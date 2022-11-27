@@ -58,7 +58,7 @@ export const getFligths = () => async (dispatch) => {
     dispatch(getFlight_OptionRequest());
 
     try {
-        let res = await axios.get("https://bookingcoclone.herokuapp.com/flight");
+        let res = await axios.get("https://foremost-bronzed-galley.glitch.me/flight");
         let data = await res.data;
         console.log("cfghfgj")
         dispatch(getFlight_OptionSuccess(data));
